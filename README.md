@@ -4,8 +4,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary
-	This project is an online food ordering system for Simply Siam Restaurant.
+* An online food ordering system for Simply Siam Restaurant.
 * Version
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
