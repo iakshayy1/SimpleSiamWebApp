@@ -5,6 +5,7 @@ This README would normally document whatever steps are necessary to get your app
 ### What is this repository for? ###
 
 * An online food ordering system for Simply Siam Restaurant.
+* This application uses nodejs for implementing server and expressjs for routing
 * Version
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
