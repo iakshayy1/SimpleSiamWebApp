@@ -3,6 +3,7 @@
 <!-- Bala Krishna Vijayagiri -->
 	<link rel="stylesheet" type="text/css" href="page.css">
 	<link rel="stylesheet" type="text/css" href="menu.css">
+	<link rel="stylesheet" type="text/css" href="tab.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -52,93 +53,201 @@ small {
 	<div class="wrapper">
 		<div class="menu_title">
 			<h2>The Menu</h2>
-
-			<div class="load-more">
-				<a href="#" id="more_items">
-					show more
-					<hr/>
-					<span class="bottom_arrow"></span>
-				</a>
-		</div></div>
+    </div>
 		
-
-		<div class="mean_menu">
-			<!--  left menu row  -->
-			<article class="lmenu">
-				<ul>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Voluptate cillum fugiat.</h3>
-							<p class="item_desc">Cheese, tomato, mushrooms, onions.</p>
-						</div>
-						<h4 class="price">$50</h4>
-						<span class="separator"></span>
-					</li>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Metus varius laoreet.</h3>
-							<p class="item_desc">Chicken, mozzarella cheese, onions.</p>
-						</div>
-						<h4 class="price">$62</h4>
-						<span class="separator"></span>
-					</li>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Donec sodales magna.</h3>
-							<p class="item_desc">Tuna, Sweetcorn, Cheese.</p>
-						</div>
-						<h4 class="price">$25</h4>
-						<span class="separator"></span>
-					</li>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Saugue velit cursus.</h3>
-							<p class="item_desc">Pineapple, Minced Beef, Cheese.</p>
-						</div>
-						<h4 class="price">$30</h4>
-						<span class="separator"></span>
-					</li>
-				</ul>
-			</article>
-
-			<!--  right menu row  -->
-			<article class="rmenu">
-				<ul>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Arcu pede enim justo.</h3>
-							<p class="item_desc">Tuna, Sweetcorn, Cheese.</p>
-						</div>
-						<h4 class="price">$45</h4>
-						<span class="separator"></span>
-					</li>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Cras dapibussemper nisi.</h3>
-							<p class="item_desc">Pineapple, Minced Beef, Cheese.</p>
-						</div>
-						<h4 class="price">$32</h4>
-						<span class="separator"></span>
-					</li>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Quam semper libero.</h3>
-							<p class="item_desc">Cheese, tomato, mushrooms, onions.</p>
-						</div>
-						<h4 class="price">$15</h4>
-						<span class="separator"></span>
-					</li>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Nam eget dui Etiam.</h3>
-							<p class="item_desc">Chicken, mozzarella cheese, onions.</p>
-						</div>
-						<h4 class="price">$35</h4>
-						<span class="separator"></span>
-					</li>
-				</ul>
-			</article>
+<!--Delicious-->
+<!--
+<div class="col-md-12  text-center gallery-trigger">
+		<ul>
+		  <li><a class="filter" data-filter="all">Show All</a></li>
+		  <li><a class="filter" data-filter=".category-1">Breakfast</a></li>
+		  <li><a class="filter" data-filter=".category-2">Lunch</a></li>
+		  <li><a class="filter" data-filter=".category-3">Dinner</a></li>
+		</ul>
+	  </div>
+	   <div id="Container">
+		<div class="mix category-1 menu-restaurant" data-myorder="2">
+		  <span class="clearfix">
+					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
+		  <span class="menu-price">$20.99</span>
+		  </span>
+		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
 		</div>
+		<div class="mix category-1 menu-restaurant" data-myorder="2">
+		  <span class="clearfix">
+					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
+		  <span class="menu-price">$20.99</span>
+		  </span>
+		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+		</div>
+		<div class="mix category-1 menu-restaurant" data-myorder="2">
+		  <span class="clearfix">
+					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
+		  <span class="menu-price">$20.99</span>
+		  </span>
+		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+		</div>
+		<div class="mix category-1 menu-restaurant" data-myorder="2">
+		  <span class="clearfix">
+					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
+		  <span class="menu-price">$20.99</span>
+		  </span>
+		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+		</div>
+		<div class="mix category-2 menu-restaurant" data-myorder="2">
+		  <span class="clearfix">
+					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
+		  <span class="menu-price">$20.99</span>
+		  </span>
+		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+		</div>
+		<div class="mix category-2 menu-restaurant" data-myorder="2">
+		  <span class="clearfix">
+					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
+		  <span class="menu-price">$20.99</span>
+		  </span>
+		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+		</div>
+		<div class="mix category-2 menu-restaurant" data-myorder="2">
+		  <span class="clearfix">
+					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
+		  <span class="menu-price">$20.99</span>
+		  </span>
+		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+		</div>
+		<div class="mix category-2 menu-restaurant" data-myorder="2">
+		  <span class="clearfix">
+					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
+		  <span class="menu-price">$20.99</span>
+		  </span>
+		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+		</div>
+		<div class="mix category-3 menu-restaurant" data-myorder="2">
+		  <span class="clearfix">
+					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
+		  <span class="menu-price">$20.99</span>
+		  </span>
+		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+		</div>
+		<div class="mix category-3 menu-restaurant" data-myorder="2">
+		  <span class="clearfix">
+					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
+		  <span class="menu-price">$20.99</span>
+		  </span>
+		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+		</div>
+		<div class="mix category-3 menu-restaurant" data-myorder="2">
+		  <span class="clearfix">
+					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
+		  <span class="menu-price">$20.99</span>
+		  </span>
+		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+		</div>
+		<div class="mix category-3 menu-restaurant" data-myorder="2">
+		  <span class="clearfix">
+					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
+					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
+		  <span class="menu-price">$20.99</span>
+		  </span>
+		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+		</div> -->
+
+
+
+<!-- Tabbed list-->		
+<div class="menutab">
+	<button class="tablinks" onclick="openMenu(event, 'Appetizers')" id="defaultOpen">Appetizers</button>
+	<button class="tablinks" onclick="openMenu(event, 'Soups')">Soups</button>
+	<button class="tablinks" onclick="openMenu(event, 'Salads')">Salads</button>
+	<button class="tablinks" onclick="openMenu(event, 'Fried Rice')">Fried Rice</button>
+	<button class="tablinks" onclick="openMenu(event, 'Main Course')">Main Courses</button>
+	<button class="tablinks" onclick="openMenu(event, 'Salads')">Salads</button>
+  </div>
+
+  <div id="Appetizers" class="tabcontent">
+	<h3>Appetizers</h3>
+	<div class="mean_menu">
+		<!--  left menu row  -->
+		<article class="lmenu">
+			<ul>
+				<li>
+					<div id=thaiEggRolls class="item_info">
+						<h3 class="item_name" onClick="menuItemClick('thaiEggRolls')">Thai Egg Rolls (Porpia Tod) 4 Pcs</h3>
+						<p class="item_desc">Rolled fresh daily.</p>
+						<p for="thaiEggRolls">Order quantity : <input id="thaiEggRolls" type="number" value="0" size="3"/> </p>
+					</div>
+					<h4 class="price">$3.75</h4>
+					<span class="separator"></span>
+				</li>
+				<li>
+					<div class="item_info">
+						<h3 class="item_name">Fried Wonton (Keow Tod) 10 Pcs</h3>
+						<p class="item_desc">With minced pork.</p>
+						<p for="friedWontonPork">Order quantity : <input id="friedWontonPork" type="number" value="0" size="3"/> </p>
+					</div>
+					<h4 class="price">$4.25</h4>
+					<span class="separator"></span>
+				</li>
+				<li>
+					<div class="item_info">
+						<h3 class="item_name">Fried Wonton 20 Pcs</h3>
+						<p class="item_desc"></p>
+						<p for="friedWonton">Order quantity : <input id="friedWonton" type="number" value="0" size="3"/> </p>	
+					</div>
+					<h4 class="price">$3.75</h4>
+					<span class="separator"></span>
+				</li>
+			</ul>
+		</article>
+
+		<!--  right menu row  -->
+		<article class="rmenu">
+			<ul>
+				<li>
+					<div class="item_info">
+						<h3 class="item_name">Thai Crab Rangoon 4 Pcs</h3>
+						<p class="item_desc">Crab</p>
+						<p for="crabRangoon">Order quantity : <input id="crabRangoon" type="number" value="0" size="3"/> </p>
+					</div>
+					<h4 class="price">$3.75</h4>
+					<span class="separator"></span>
+				</li>
+				<li>
+					<div class="item_info">
+						<h3 class="item_name">Shrimp Cakes 4 Pcs.</h3>
+						<p class="item_desc">Shrimp patty, deep-fried and served with<br> sweet and sour sauce.</p>
+						
+						<p for="shrimpCakes">Order quantity : <input id="shrimpCakes" type="number" value="0" size="3"/> </p>
+					</div>
+					<h4 class="price">$4.75</h4>
+					<span class="separator"></span>
+				</li>
+				</ul>
+		</article>
+	</div>
+
+  </div>
+  
+  <div id="Soups" class="tabcontent">
+	<h3>Soups</h3>
+	<p>Soups is the capital of France.</p> 
+  </div>
+  
+  <div id="Salads" class="tabcontent">
+	<h3>Salads</h3>
+	<p>Salads is the capital of Japan.</p>
+  </div>
 
 		<!--  hidden menu items  -->
 		<div class="hidden_items">
@@ -379,5 +488,7 @@ small {
 					</table>
 				</div>
 </div>
+
+<script src="tab.js"></script>
 
 				</body>
