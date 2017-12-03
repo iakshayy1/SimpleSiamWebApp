@@ -31,6 +31,6 @@ app.get("/login", function (request, response) {
 
 // Listen for an application request on port 8081
 server.listen(8080, function () {
-  console.log('Guestbook app listening on http://127.0.0.1:8080/');
+  console.log('SimplySiam listening on http://127.0.0.1:8080/');
 });
 
