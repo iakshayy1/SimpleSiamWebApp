@@ -9,10 +9,12 @@
     "lite": "lite-server"
   },
   "dependencies": {
-    "express": "latest",
-    "morgan": "latest",
     "body-parser": "latest",
-    "ejs": "latest"
+    "ejs": "latest",
+    "express": "latest",
+    "mongoose": "^4.13.6",
+    "morgan": "latest",
+    "nodemon": "^1.12.1"
   },
   "repository": {
     "type": "git",

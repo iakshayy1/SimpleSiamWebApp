@@ -1,0 +1,200 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Contact</title>
+
+
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+        
+      <!--   <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">  
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="bootstrap-social.css">
+        <link rel="stylesheet" href="bootstrap-social.less">
+        <link rel="stylesheet" href="font-awesome.min.css" >
+        <link rel="stylesheet prefetch" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+     -->
+    
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+   
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    
+    <!-- <div class="jumbotron"> 
+      
+        
+      <nav class="navbar navbar-inverse">
+      
+      <ul class="nav nav-tabs">
+          
+  <li role="presentation"><a href="index.html" <span class="glyphicon glyphicon-home"></span><b> Home</b></a></li>
+  <li role="presentation" class = ><a href="profile.html" <span class="glyphicon glyphicon-usd"></span><b> Calculator</b></a></li>
+  <li role="presentation" class = "active"><a href="contact.html"<span class="glyphicon glyphicon-phone"></span><b> Contact</b></a></li>
+</ul>
+
+</nav> -->
+
+
+
+
+
+ <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"> Simply Siam</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/index">Home</a>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Menu
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="/menu">Dine-in</a>
+                        </li>
+                        <li>
+                            <a href="/menu">Pick up</a>
+                        </li>
+                        <li>
+                            <a href="/menu">Delivery</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="/login">Login</a>
+                </li>
+                 <li><a href="/contact">Contact</a></li>
+            </ul>
+            <!--    <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </form> -->
+        </div>
+    </nav>
+
+<!-- start of form  -->
+
+
+<center> <b><%= message %></b></center>
+<form action="/sendemail" method="post">
+
+
+    <div class="container">
+      <!-- Example row of columns -->
+     <div class="row">
+         
+          <div class="form-group">
+  <label for="example-text-input" class="col-md-12 control-label">First Name</label>
+  <div class="col-md-6 inputGroupContainer">
+       <div class = "input-group">
+           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input class="form-control" type="text" name="firstname" placeholder="First name" id="example-text-input">
+  </div>
+</div>
+</div>
+<div class="form-group">
+  <label for="example-search-input" class="col-md-12 control-label">Last Name</label>
+  <div class="col-md-6 inputGroupContainer">
+       <div class = "input-group">
+           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input class="form-control" type="search" name="lastname" placeholder="Last name" id="example-search-input">
+  </div>
+</div>
+</div>
+<div class="form-group">
+  <label class="col-md-12 control-label">Email</label>
+  <div class="col-md-6 inputGroupContainer">
+      <div class = "input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+    <input class="form-control" type="email" name="email" placeholder="mail@example.com" id="example-email-input">
+  </div>
+</div>
+</div>
+<div class="form-group">
+  <label class="col-md-12 control-label">Number</label>
+  <div class="col-md-6 inputGroupContainer">
+      <div class ="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+    <input class="form-control" type="number" name="number" placeholder="660xxxxxx" id="example-number-input">
+    
+  </div>
+</div>
+</div>
+<div class="form-group">
+  <label class="col-md-12 control-label">Message</label>
+    <div class="col-md-6 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        	<textarea class="form-control" name="message" placeholder="type message here....."></textarea>
+  </div>
+  </div>
+</div>
+<div class="form-group">
+      <div class="offset-sm-2 col-sm-10"><center>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </div>
+ </div>
+
+ 
+
+      </form>
+      
+
+      <!-- end of form -->
+
+    </div>  
+    </div> <!-- /container --> 
+    </div> 
+    </div>
+    
+    <footer id = icons>
+      <div class ="container">
+  <div class="col-md-6">
+    <p>Follow me @:</p>
+<div class ="social-icons icon-circle list-unstyled list-inline">
+  <a href="https://www.facebook.com/akshay.reddy.7564" class="facebook"><i class="fa fa-facebook"></i></a>&nbsp&nbsp&nbsp
+  <a href="https://www.twitter.com/iakshayy1/" class="twitter"><i class="fa fa-twitter"></i></a>&nbsp&nbsp&nbsp
+  <a href="https://www.github.com/iakshayy1/" class="github"><i class="fa fa-github"></i></a>&nbsp&nbsp&nbsp
+  <a href="https://www.bitbucket.com/iakshayy1/" class="bitbucket"><i class="fa fa-bitbucket"></i></a>&nbsp&nbsp&nbsp
+  <a href="https://www.linkedin.com/in/akshay-reddy-702267a8?trk=nav_responsive_tab_profile_pic" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  
+     </div>
+     </div>
+     </div> 
+      
+</footer>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
