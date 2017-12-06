@@ -128,7 +128,7 @@ const mailOptions = {
   from: email, // sender address
   to: 'rkradhkrishna@gmail.com', // list of receivers
   subject:  firstname, // Subject line
-  html: message// plain text body
+  html: firstname+' '+lastname+' says: '+ message ,// plain text body
 };
 
 
@@ -149,7 +149,7 @@ res.render('contact',{
 
 
 
-server.listen(4040, function () {
+server.listen(7777, function () {
   console.log('SimplySiam listening on http://127.0.0.1:6666/');
 });
 
