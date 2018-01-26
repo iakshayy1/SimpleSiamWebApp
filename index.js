@@ -150,7 +150,7 @@ res.render('contact',{
 
 
 server.listen(6858, function () {
-  console.log('SimplySiam listening on http://127.0.0.1:6666/');
+  console.log('SimplySiam listening on http://127.0.0.1:6858/');
 });
 
 
