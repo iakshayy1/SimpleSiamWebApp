@@ -4,6 +4,7 @@ var logger = require("morgan");
 var bodyParser = require("body-parser");
 var register = require("./models/register.model.js");
 const mongoose = require("mongoose");
+var port = process.env.PORT || 3000;
 mongoose.connect("mongodb://localhost:27017/siamusers", { useMongoClient: true });
 
 
@@ -149,8 +150,11 @@ res.render('contact',{
 
 
 
-server.listen(6858, function () {
-  console.log('SimplySiam listening on http://127.0.0.1:6858/');
+
+
+app.listen(port, function () {
+  console.log('SimplySiam listening on port' + port + '!');
+
 });
 
 

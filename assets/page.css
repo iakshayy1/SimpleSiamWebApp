@@ -6,7 +6,10 @@ body {
     background: #0ca3d2;
   } 
 body{
-    background-image:url("bck.jpg");
+    background-image:url("simplysiam.png");
+ background-repeat: no-repeat;
+    
+    background-position: center; 
     
 } 
 #login-text{
