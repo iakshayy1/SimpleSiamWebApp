@@ -38,6 +38,12 @@ app.get("/login", function (request, response) {
     errormessage: ""
   });
 });
+
+app.get("/OnlineOrderingMenu", function (request, response) {
+  response.render("OnlineOrderingMenu", {
+    errormessage: ""
+  });
+});
 // POSTS
 app.post("/login", function (req, res) {
   // console.log(req.body);
@@ -150,9 +156,9 @@ res.render('contact',{
 
 
 
- server.listen(6565, function () {
+ server.listen(6655, function () {
 
- console.log('SimplySiam listening on http://127.0.0.1:6565/');
+ console.log('SimplySiam listening on http://127.0.0.1:6655/');
 
 
 // app.listen(port, function () {
