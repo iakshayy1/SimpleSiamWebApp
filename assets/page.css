@@ -97,6 +97,18 @@ h3 {
 }
 
 #login-text {
+    font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+    color: #404040;
+    background: #0ca3d2;
+}
+
+body {
+    background-image: url("simplysiam.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#login-text {
     /* color:beige; */
     color: black
 }

@@ -6,6 +6,7 @@ var session = require('express-session');
 var User = require("./models/register.model.js");
 const mongoose = require("mongoose");
 const MongoStore = require('connect-mongo')(session);
+// var port = process.env.PORT || 3000;
 mongoose.connect("mongodb://localhost:27017/siamusers", { useMongoClient: true });
 var db = mongoose.connection;
 
@@ -56,6 +57,12 @@ app.get("/menu", function(request, response) {
 });
 app.get("/login", function(request, response) {
     response.render("login", {
+        errormessage: ""
+    });
+});
+
+app.get("/OnlineOrderingMenu", function(request, response) {
+    response.render("OnlineOrderingMenu", {
         errormessage: ""
     });
 });
@@ -218,9 +225,17 @@ app.post('/sendemail', function(req, res) {
 
 
 
-server.listen(3000, function() {
-    console.log('SimplySiam listening on http://127.0.0.1:6858/');
+server.listen(6655, function() {
+
+    console.log('SimplySiam listening on http://127.0.0.1:6655/');
+
+
+    // app.listen(port, function () {
+    //   console.log('SimplySiam listening on port' + port + '!');
+
 });
+
+
 
 
 // email handling code

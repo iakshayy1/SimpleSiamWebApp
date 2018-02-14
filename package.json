@@ -14,8 +14,8 @@
     "express": "latest",
     "mongoose": "^4.13.6",
     "morgan": "latest",
-    
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "nodemailer": "latest"
   },
   "repository": {
     "type": "git",
