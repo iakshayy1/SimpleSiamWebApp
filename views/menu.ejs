@@ -1,508 +1,364 @@
-<head > 
-<!-- Tarunkumar potlapalli -->
-<!-- Bala Krishna Vijayagiri -->
-	<link rel="stylesheet" type="text/css" href="page.css">
-	<link rel="stylesheet" type="text/css" href="menu.css">
-	<link rel="stylesheet" type="text/css" href="tab.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<html id="background">
+
+<head>
+    <!-- Tarunkumar potlapalli -->
+    <!-- Bala Krishna Vijayagiri -->
+    <!-- <link rel="stylesheet" type="text/css" href="page.css"> -->
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="tab.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
- td,tr {
-    border: 1px dashed black;
-}
-small { 
-    font-size: smaller;
-}
-</style>
+    <style>
+        td,
+        tr {
+            border: 1px dashed black;
+        }
+        
+        small {
+            font-size: smaller;
+        }
+    </style>
 </head>
 
-<body id="menu-text">
-	
-	<nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/"> Simply Siam</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="/index">Home</a>
-                </li>
-                <li>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Menu
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="/menu">Dine-in</a>
-                        </li>
-                        <li>
-                            <a href="/menu">Pick up</a>
-                        </li>
-                        <li>
-                            <a href="/menu">Delivery</a>
-                        </li>
-                    </ul>
-                </li>
+<body>
 
-                <li class="active">
-                    <a href="/login">Login</a>
-                </li>
-                 <li><a href="/contact">Contact</a></li>
-            </ul>
-            <!--    <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                  </form> -->
+    <nav>
+        <!-- <div class="nav" id="nav1"></div> -->
+        <ul>
+            <!-- <li>
+                        <a class="active" href="/"> Simply Siam</a>
+                    </li> -->
+
+            <li class="active">
+                <a href="/index">Home</a>
+
+            </li>
+
+            <li>
+                <a href="/menu">Menu</a>
+            </li>
+
+
+
+            <li>
+                <a href="/login">Login</a>
+            </li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
         </div>
+
     </nav>
 
-	  
-	  <h1>Menu</h1>
 
-<!--  start menu  -->
-<section class="menu">
-	<div class="wrapper">
-		<div class="menu_title">
-			<h2>The Menu</h2>
-    </div>
-		
-<!--Delicious-->
-<!--
-<div class="col-md-12  text-center gallery-trigger">
-		<ul>
-		  <li><a class="filter" data-filter="all">Show All</a></li>
-		  <li><a class="filter" data-filter=".category-1">Breakfast</a></li>
-		  <li><a class="filter" data-filter=".category-2">Lunch</a></li>
-		  <li><a class="filter" data-filter=".category-3">Dinner</a></li>
-		</ul>
-	  </div>
-	   <div id="Container">
-		<div class="mix category-1 menu-restaurant" data-myorder="2">
-		  <span class="clearfix">
-					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
-		  <span class="menu-price">$20.99</span>
-		  </span>
-		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-		</div>
-		<div class="mix category-1 menu-restaurant" data-myorder="2">
-		  <span class="clearfix">
-					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
-		  <span class="menu-price">$20.99</span>
-		  </span>
-		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-		</div>
-		<div class="mix category-1 menu-restaurant" data-myorder="2">
-		  <span class="clearfix">
-					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
-		  <span class="menu-price">$20.99</span>
-		  </span>
-		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-		</div>
-		<div class="mix category-1 menu-restaurant" data-myorder="2">
-		  <span class="clearfix">
-					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
-		  <span class="menu-price">$20.99</span>
-		  </span>
-		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-		</div>
-		<div class="mix category-2 menu-restaurant" data-myorder="2">
-		  <span class="clearfix">
-					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
-		  <span class="menu-price">$20.99</span>
-		  </span>
-		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-		</div>
-		<div class="mix category-2 menu-restaurant" data-myorder="2">
-		  <span class="clearfix">
-					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
-		  <span class="menu-price">$20.99</span>
-		  </span>
-		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-		</div>
-		<div class="mix category-2 menu-restaurant" data-myorder="2">
-		  <span class="clearfix">
-					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
-		  <span class="menu-price">$20.99</span>
-		  </span>
-		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-		</div>
-		<div class="mix category-2 menu-restaurant" data-myorder="2">
-		  <span class="clearfix">
-					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
-		  <span class="menu-price">$20.99</span>
-		  </span>
-		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-		</div>
-		<div class="mix category-3 menu-restaurant" data-myorder="2">
-		  <span class="clearfix">
-					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
-		  <span class="menu-price">$20.99</span>
-		  </span>
-		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-		</div>
-		<div class="mix category-3 menu-restaurant" data-myorder="2">
-		  <span class="clearfix">
-					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
-		  <span class="menu-price">$20.99</span>
-		  </span>
-		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-		</div>
-		<div class="mix category-3 menu-restaurant" data-myorder="2">
-		  <span class="clearfix">
-					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
-		  <span class="menu-price">$20.99</span>
-		  </span>
-		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-		</div>
-		<div class="mix category-3 menu-restaurant" data-myorder="2">
-		  <span class="clearfix">
-					  <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-					  <span style="left: 166px; right: 44px;" class="menu-line"></span>
-		  <span class="menu-price">$20.99</span>
-		  </span>
-		  <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-		</div> -->
+    <h1>Menu</h1>
+
+    <!-- <h3>hello
+        <%=user%>
+    </h3> -->
 
 
+    <!--  start menu  -->
+    <section class="menu">
+        <div class="wrapper">
+            <div class="menu_title">
+                <h2>The Menu</h2>
+            </div>
 
-<!-- Tabbed list-->		
-<div class="menutab">
-	<button class="tablinks" onclick="openMenu(event, 'Appetizers')" id="defaultOpen">Appetizers</button>
-	<button class="tablinks" onclick="openMenu(event, 'Soups')">Soups</button>
-	<button class="tablinks" onclick="openMenu(event, 'Salads')">Salads</button>
-	<button class="tablinks" onclick="openMenu(event, 'Fried Rice')">Fried Rice</button>
-	<button class="tablinks" onclick="openMenu(event, 'Main Course')">Main Courses</button>
-	<button class="tablinks" onclick="openMenu(event, 'Salads')">Salads</button>
-  </div>
+            <div style="float:left; width:494px;">
+                <div style="padding-left:50px; padding-bottom:20px; padding-top:10px;">
 
-  <div id="Appetizers" class="tabcontent">
-	<h3>Appetizers</h3>
-	<div class="mean_menu">
-		<!--  left menu row  -->
-		<article class="lmenu">
-			<ul>
-				<li>
-					<div id=thaiEggRolls class="item_info">
-						<h3 class="item_name" onClick="menuItemClick('thaiEggRolls')">Thai Egg Rolls (Porpia Tod) 4 Pcs</h3>
-						<p class="item_desc">Rolled fresh daily.</p>
-						<p for="thaiEggRolls">Order quantity : <input id="thaiEggRolls" type="number" value="0" size="3"/> </p>
-					</div>
-					<h4 class="price">$3.75</h4>
-					<span class="separator"></span>
-				</li>
-				<li>
-					<div class="item_info">
-						<h3 class="item_name">Fried Wonton (Keow Tod) 10 Pcs</h3>
-						<p class="item_desc">With minced pork.</p>
-						<p for="friedWontonPork">Order quantity : <input id="friedWontonPork" type="number" value="0" size="3"/> </p>
-					</div>
-					<h4 class="price">$4.25</h4>
-					<span class="separator"></span>
-				</li>
-				<li>
-					<div class="item_info">
-						<h3 class="item_name">Fried Wonton 20 Pcs</h3>
-						<p class="item_desc"></p>
-						<p for="friedWonton">Order quantity : <input id="friedWonton" type="number" value="0" size="3"/> </p>	
-					</div>
-					<h4 class="price">$3.75</h4>
-					<span class="separator"></span>
-				</li>
-			</ul>
-		</article>
+                    <table border="0" cellpadding="3" cellspacing="0">
+                        <tr>
+                            <td>
+                                <h3 align=center>Appetizers</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="340">Thai Egg Rolls (<small>Porpia Tod</small>) 4 Pcs.<br/>
+                                <div style="padding-left:20px;">
+                                    <small>Rolled fresh daily.<small></div></td><td width="60" align="right">$3.75</td>
+					</tr>
+					<tr>
+						<td width="340">Fried Wonton (<small>Keow Tod</small>) 10 Pcs.<br/>
+                                    <div style="padding-left:20px;"><small>With minced pork.</small></div>
+                            </td>
+                            <td width="60" align="right">$4.25</td>
+                        </tr>
+                        <tr>
+                            <td width="340">Fried Wonton Chips 20 Pcs.</td>
+                            <td width="60" align="right">$3.75</td>
+                        </tr>
+                        <tr>
+                            <td width="340">Thai Crab Rangoon 4 Pcs.</td>
+                            <td width="60" align="right">$3.75</td>
+                        </tr>
+                        <tr>
+                            <td width="340">Shrimp Cakes 4 Pcs. <br/>
+                                <div style="padding-left:20px;"><small>Shrimp patty, deep-fried and served with sweet &amp; sour sauce.</small></div>
+                            </td>
+                            <td width="60" valign="top" align="right">$4.75</td>
+                        </tr>
+                    </table>
+                    </div>
 
-		<!--  right menu row  -->
-		<article class="rmenu">
-			<ul>
-				<li>
-					<div class="item_info">
-						<h3 class="item_name">Thai Crab Rangoon 4 Pcs</h3>
-						<p class="item_desc">Crab</p>
-						<p for="crabRangoon">Order quantity : <input id="crabRangoon" type="number" value="0" size="3"/> </p>
-					</div>
-					<h4 class="price">$3.75</h4>
-					<span class="separator"></span>
-				</li>
-				<li>
-					<div class="item_info">
-						<h3 class="item_name">Shrimp Cakes 4 Pcs.</h3>
-						<p class="item_desc">Shrimp patty, deep-fried and served with<br> sweet and sour sauce.</p>
-						
-						<p for="shrimpCakes">Order quantity : <input id="shrimpCakes" type="number" value="0" size="3"/> </p>
-					</div>
-					<h4 class="price">$4.75</h4>
-					<span class="separator"></span>
-				</li>
-				</ul>
-		</article>
-	</div>
+                    <div style="padding-left:50px; padding-bottom:20px; padding-top:10px;">
+                        <table border="0" cellpadding="3" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <h3 align=center>Soups</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <tr>
+                                    <td width="340">Thai Wonton Soup<br/>
+                                        <div style="padding-left:20px;"><small>Minced pork in wonton wrappers, carrots, green onions, cilantro, garlic oil, egg and white pepper.</small></div>
+                                    </td>
+                                    <td width="60" align="right">$4.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Thai Keow Za<br/>
+                                        <div style="padding-left:20px;"><small>Wonton dumpling soup with bean sprouts, carrots, green onion, cilantro, garlic oil, lime juice and white pepper.</small></div>
+                                    </td>
+                                    <td width="60" align="right">$6.50</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Napa Soup (<small>Gaeng jued moo sap</small>)<br/>
+                                        <div style="padding-left:20px;"><small>Minced pork or chicken with Napa cabbage, bean noodle, carrots, egg, garlic oil and cilantro.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$5.25</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Pho Noodle Soup
+                                        <div style="padding-left:20px;"><small>Rice noodle soup with BBQ red pork, bok choy, garlic oil, carrots, green onion, cilantro, ground peanuts and white pepper.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$6.50</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Shrimp Soup <br/>
+                                        <div style="padding-left:20px;"><small>Shrimp, seaweed, carrots, green onion, cilantro, asian celery, egg, garlic oil and white pepper.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$6.50</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Rice Soup <br/>
+                                        <div style="padding-left:20px;"><small>Jasmine rice with minced pork or chicken or shrimp, egg, garlic oil, Asian celery, green onion, cilantro and white pepper.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$5.25</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Noodle Tom Yum<br/>
+                                        <div style="padding-left:20px;"><small>Rice or bean noodle soup with choice of meat or seafood, bean sprouts, green onion, Asian celery, cilantro and white pepper.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$6.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Hot &amp; Sour Soup (<small>Tom yum</small>) <img src="./chili.png" /><br/>
+                                        <div style="padding-left:20px;"><small>Chicken, shrimp, or seafood with mushroom, onion, tomato, Asian celery, cilantro, cooked with tom yum paste and milk.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Chicken Coconut Milk Soup (<small>Tom kha gai</small>)<br/>
+                                        <div style="padding-left:20px;"><small>Coconut milk soup with sliced chicken, mushroom, tomato, onion and Asian celery.  Seasoned with galanga and lemon grass.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Kang Gai Ban <img src="./chili.png" /><br/>
+                                        <div style="padding-left:20px;"><small>Sliced chicken soup with tomato, onion, galanga, lemon grass, lime juice, ciantro, fresh Thai chili and fresh garlic.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.95</td>
+                                </tr>
+                        </table>
+                    </div>
 
-  </div>
-  
-  <div id="Soups" class="tabcontent">
-	<h3>Soups</h3>
-	<p>Soups is the capital of France.</p> 
-  </div>
-  
-  <div id="Salads" class="tabcontent">
-	<h3>Salads</h3>
-	<p>Salads is the capital of Japan.</p>
-  </div>
+                    <div style="padding-left:50px; padding-bottom:20px; padding-top:10px;">
+                        <table border="0" cellpadding="3" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <h3 align=center>Salads</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <tr>
+                                    <td width="340">Thai Green Salad (<small>Salad puk</small>)<br/>
+                                        <div style="padding-left:20px;"><small>Fresh lettuce, carrot, cucumber, red onion and tomato.  Served with Thai peanut dressing.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$3.75</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Spicy Shrimp or Seafood Salad (<small>Yum goong</small>) <img src="./chili.png" /><br/>
+                                        <div style="padding-left:20px;"><small>Shrimp or seafood seasoned with onion, Asian celery, tomato, peanut, lime juice, fresh Thai chili and fresh garlic.  Topped with fried onion, roasted chili and cilantro.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$8.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Papaya Salad (<small>Somtom</small>) <img src="./chili.png" /><br/>
+                                        <div style="padding-left:20px;"><small>Papaya and carrots mixed with fresh chili, fresh garlic, peanut, tomato and lime juice.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$6.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Bean Noodle Spicy Salad (<small>Yum woon sen</small>) <img src="./chili.png" /><br/>
+                                        <div style="padding-left:20px;"><small>Bean noodles mixed with minced chicken, shrimp, onion, peanuts, Asian celery, tomato, lime juice, fresh chili and fresh garlic.  Topped with fried onion, roasted chili and cilantro.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.95</td>
+                                </tr>
+                        </table>
+                    </div>
 
-		<!--  hidden menu items  -->
-		<div class="hidden_items">
-			<!--  left menu row  -->
-			<article class="lmenu">
-				<ul>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Voluptate cillum fugiat.</h3>
-							<p class="item_desc">Cheese, tomato, mushrooms, onions.</p>
-						</div>
-						<h4 class="price">$50</h4>
-					<span class="separator"></span>
-					</li>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Voluptate cillum fugiat.</h3>
-							<p class="item_desc">Cheese, tomato, mushrooms, onions.</p>
-						</div>
-						<h4 class="price">$50</h4>
-					<span class="separator"></span>
-					</li>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Voluptate cillum fugiat.</h3>
-							<p class="item_desc">Cheese, tomato, mushrooms, onions.</p>
-						</div>
-						<h4 class="price">$50</h4>
-					<span class="separator"></span>
-					</li>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Voluptate cillum fugiat.</h3>
-							<p class="item_desc">Cheese, tomato, mushrooms, onions.</p>
-						</div>
-						<h4 class="price">$50</h4>
-					<span class="separator"></span>
-					</li>
-				</ul>
-			</article>
+                    <div style="padding-left:50px; padding-bottom:20px; padding-top:10px;">
+                        <table border="0" cellpadding="3" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <h3 align=center>Fried Rice</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <tr>
+                                    <td width="340">Chicken Fried Rice <br/>
+                                        <div style="padding-left:20px;"><small>Sliced chicken stir-fied with egg, carrots, bell pepper and onion.</small></div>
+                                    </td>
+                                    <td width="60" align="right">$7.25</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Shrimp or Seafood Fried Rice</td>
+                                    <td width="60" align="right">$8.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Vegetable Fried Rice <br/>
+                                        <div style="padding-left:20px;"><small>Egg stir-fried with tomato, carrots, bell pepper and onion.</small></div>
+                                    </td>
+                                    <td width="60" align="right">$7.25</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Emerald Curry Fried Rice <img src="./chili.png" /><br/>
+                                        <div style="padding-left:20px;"><small>Spicy green curry paste stir-fried with choice of meat, bell pepper, onion and Thai basil.</small></div>
+                                    </td>
+                                    <td width="60" align="right">$7.25</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Basil Fried Rice (<small>Spicy Fried Rice</small>) <img src="./chili.png" /><br/>
+                                        <div style="padding-left:20px;"><small>Spicy chili paste stir-fried with choice of meat, bell pepper, onion and Thai basil.</small></div>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.25</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Tom Yum Fried Rice <img src="./chili.png" /><br/>
+                                        <div style="padding-left:20px;"><small>Hot, spicy tom yum paste stir-fried with choice of meat, mushroom, Asian celery, onion and tomato.</small></div>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.25</td>
+                                </tr>
+                        </table>
+                    </div>
+                </div>
 
-			<!--  right menu row  -->
-			<article class="rmenu">
-				<ul>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Voluptate cillum fugiat.</h3>
-							<p class="item_desc">Cheese, tomato, mushrooms, onions.</p>
-						</div>
-						<h4 class="price">$50</h4>
-					<span class="separator"></span>
-					</li>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Voluptate cillum fugiat.</h3>
-							<p class="item_desc">Cheese, tomato, mushrooms, onions.</p>
-						</div>
-						<h4 class="price">$50</h4>
-					<span class="separator"></span>
-					</li>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Voluptate cillum fugiat.</h3>
-							<p class="item_desc">Cheese, tomato, mushrooms, onions.</p>
-						</div>
-						<h4 class="price">$50</h4>
-					<span class="separator"></span>
-					</li>
-					<li>
-						<div class="item_info">
-							<h3 class="item_name">Voluptate cillum fugiat.</h3>
-							<p class="item_desc">Cheese, tomato, mushrooms, onions.</p>
-						</div>
-						<h4 class="price">$50</h4>
-					<span class="separator"></span>
-					</li>
-				</ul>
-			</article>
-		</div>
+                <div style="float:left; width:475px;" align="right">
+                    <div style="padding-right:50px; padding-bottom:20px; padding-top:10px;">
+                        <table border="0" cellpadding="3" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <h3 align=center>Main Courses</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <tr>
+                                    <td width="340">Garlic &amp; Pepper (<small>Pad gra tiem prig Thai</small>)<br/>
+                                        <div style="padding-left:20px;"><small>Garlic pepper sauce with choice of stir-fried meat.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$8.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Sweet &amp; Sour Pork, Chicken<br/>
+                                        <div style="padding-left:20px;"><small>Stir-fried sliced pork or chicken with onion, tomato, bell pepper, and pineapple.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Sweet &amp; Sour Vegetables (<small>Pad proew wan</small>)<br/>
+                                        <div style="padding-left:20px;"><small>Sweet and sour sauce stir-fried with pineapple, tomato, zucchini, onion, bell pepper, baby corn and cucumbers.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.25</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Chicken &amp; Cashew (<small>Pad gai mamuang himmapan</small>)<br/>
+                                        <div style="padding-left:20px;"><small>Chicken sauteed with cashew nut, onion, pineapple, bell pepper and roasted chili.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.50</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Laab Chicken <img src="./chili.png"><br/>
+                                        <div style="padding-left:20px;"><small>Minced chicken cooked with roasted rice, chili, fresh garlic, green onion, cilantro and lime juice.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.50</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Beef with Oyster Sauce (<small>Neua pat naam man hoi</small>)<br/>
+                                        <div style="padding-left:20px;"><small>Stir-fried beef with oyster sauce, carrot, zucchini, onion and garlic oil.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Khao Na Gai <br/>
+                                        <div style="padding-left:20px;"><small>Chicken stir-fried with sweet and sour sauce, garlic oil, mushroom, onion and carrots.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Pad Kra Phow <img src="./chili.png"><br/>
+                                        <div style="padding-left:20px;"><small>Choice of meat stir-fried with fresh Thai chili, garlic, onion, bell pepper and Thai basil.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Mixed Vegetables<br/>
+                                        <div style="padding-left:20px;"><small>Napa cabbage, carrot, bell pepper, baby corn, onion, zucchini, mushroom, stir-fried with fresh garlic and dark sauce.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$6.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Rad Na Stir-fry<br/>
+                                        <div style="padding-left:20px;"><small>Choice of meat stir-fried with garlic oil, mushroom, carrot, tomato, onion, Asian celery, in dark sauce, topped with white pepper.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$7.95</td>
+                                </tr>
+                                <tr>
+                                    <td width="340">Seafood Pad Cha <img src="./chili.png"><br/>
+                                        <div style="padding-left:20px;"><small>Stir-fried seafood with fresh chili, fresh garlic, bell pepper, onion, and celery.</small></div>
+                                        </small>
+                                    </td>
+                                    <td width="60" valign="top" align="right">$8.95</td>
+                                </tr>
+                        </table>
+                    </div>
+                </div>
 
-		<div class="load-more">
-			<a href="#" id="more_items">
-				show more
-				<hr/>
-				<span class="bottom_arrow"></span>
-			</a>
-		</div>
-	</div>
-</section><!--  end menu  -->
+                <script src="tab.js"></script>
 
+                <script src="home.js"></script>
+</body>
 
-
-
-<div style="float:left; width:494px;">
-<div style="padding-left:50px; padding-bottom:20px; padding-top:10px;">
-
-					<table border="0" cellpadding="3" cellspacing="0" >
-					<tr> <td> <h3 align=center>Appetizers</h3> </td></tr>
-					<tr>
-						<td width="340">Thai Egg Rolls (<small>Porpia Tod</small>) 4 Pcs.<br/><div style="padding-left:20px;">
-						<small>Rolled fresh daily.<small></div></td><td width="60" align="right">$3.75</td>
-					</tr>
-					<tr>
-						<td width="340">Fried Wonton (<small>Keow Tod</small>) 10 Pcs.<br/><div style="padding-left:20px;"><small>With minced pork.</small></div></td><td width="60" align="right">$4.25</td>
-					</tr>
-					<tr>
-						<td width="340">Fried Wonton Chips 20 Pcs.</td><td width="60" align="right">$3.75</td>
-					</tr>
-					<tr>
-						<td width="340">Thai Crab Rangoon 4 Pcs.</td><td width="60" align="right">$3.75</td>
-					</tr>
-					<tr>
-						<td width="340">Shrimp Cakes 4 Pcs. <br/><div style="padding-left:20px;"><small>Shrimp patty, deep-fried and served with sweet &amp; sour sauce.</small></div></td><td width="60" valign="top" align="right">$4.75</td>
-					</tr>
-					</table>
-				</div>
-
-<div style="padding-left:50px; padding-bottom:20px; padding-top:10px;">
-					<table border="0" cellpadding="3" cellspacing="0">
-					<tr> <td><h3 align=center>Soups</h3> </td></tr>
-					<tr>
-					<tr>
-						<td width="340">Thai Wonton Soup<br/><div style="padding-left:20px;"><small>Minced pork in wonton wrappers, carrots, green onions, cilantro, garlic oil, egg and white pepper.</small></div></td><td width="60" align="right">$4.95</td>
-					</tr>
-					<tr>
-						<td width="340">Thai Keow Za<br/><div style="padding-left:20px;"><small>Wonton dumpling soup with bean sprouts, carrots, green onion, cilantro, garlic oil, lime juice and white pepper.</small></div></td><td width="60" align="right">$6.50</td>
-					</tr>
-					<tr>
-						<td width="340">Napa Soup (<small>Gaeng jued moo sap</small>)<br/><div style="padding-left:20px;"><small>Minced pork or chicken with Napa cabbage, bean noodle, carrots, egg, garlic oil and cilantro.</small></div></small></td><td width="60" valign="top" align="right">$5.25</td>
-					</tr>
-					<tr>
-						<td width="340">Pho Noodle Soup <div style="padding-left:20px;"><small>Rice noodle soup with BBQ red pork, bok choy, garlic oil, carrots, green onion, cilantro, ground peanuts and white pepper.</small></div></small></td><td width="60" valign="top" align="right">$6.50</td>
-					</tr>
-					<tr>
-						<td width="340">Shrimp Soup <br/><div style="padding-left:20px;"><small>Shrimp, seaweed, carrots, green onion, cilantro, asian celery, egg, garlic oil and white pepper.</small></div></small></td><td width="60" valign="top" align="right">$6.50</td>
-					</tr>
-					<tr>
-						<td width="340">Rice Soup <br/><div style="padding-left:20px;"><small>Jasmine rice with minced pork or chicken or shrimp, egg, garlic oil, Asian celery, green onion, cilantro and white pepper.</small></div></small></td><td width="60" valign="top" align="right">$5.25</td>
-					</tr>
-					<tr>
-						<td width="340">Noodle Tom Yum<br/><div style="padding-left:20px;"><small>Rice or bean noodle soup with choice of meat or seafood, bean sprouts, green onion, Asian celery, cilantro and white pepper.</small></div></small></td><td width="60" valign="top" align="right">$6.95</td>
-					</tr>
-					<tr>
-						<td width="340">Hot &amp; Sour Soup (<small>Tom yum</small>) <img src="./chili.png"/><br/><div style="padding-left:20px;"><small>Chicken, shrimp, or seafood with mushroom, onion, tomato, Asian celery, cilantro, cooked with tom yum paste and milk.</small></div></small></td><td width="60" valign="top" align="right">$7.95</td>
-					</tr>
-					<tr>
-						<td width="340">Chicken Coconut Milk Soup (<small>Tom kha gai</small>)<br/><div style="padding-left:20px;"><small>Coconut milk soup with sliced chicken, mushroom, tomato, onion and Asian celery.  Seasoned with galanga and lemon grass.</small></div></small></td><td width="60" valign="top" align="right">$7.95</td>
-					</tr>
-               <tr>
-						<td width="340">Kang Gai Ban <img src="./chili.png"/><br/><div style="padding-left:20px;"><small>Sliced chicken soup with tomato, onion, galanga, lemon grass, lime juice, ciantro, fresh Thai chili and fresh garlic.</small></div></small></td><td width="60" valign="top" align="right">$7.95</td>
-					</tr>
-					</table>
-				</div>
-
-<div style="padding-left:50px; padding-bottom:20px; padding-top:10px;">
-					<table border="0" cellpadding="3" cellspacing="0">
-					<tr> <td> <h3 align=center>Salads</h3> </td></tr>
-					<tr>
-					<tr>
-						<td width="340">Thai Green Salad (<small>Salad puk</small>)<br/><div style="padding-left:20px;"><small>Fresh lettuce, carrot, cucumber, red onion and tomato.  Served with Thai peanut dressing.</small></div></small></td><td width="60" valign="top" align="right">$3.75</td>
-					</tr>
-					<tr>
-						<td width="340">Spicy Shrimp or Seafood Salad (<small>Yum goong</small>) <img src="./chili.png"/><br/><div style="padding-left:20px;"><small>Shrimp or seafood seasoned with onion, Asian celery, tomato, peanut, lime juice, fresh Thai chili and fresh garlic.  Topped with fried onion, roasted chili and cilantro.</small></div></small></td><td width="60" valign="top" align="right">$8.95</td>
-					</tr>
-					<tr>
-						<td width="340">Papaya Salad (<small>Somtom</small>) <img src="./chili.png"/><br/><div style="padding-left:20px;"><small>Papaya and carrots mixed with fresh chili, fresh garlic, peanut, tomato and lime juice.</small></div></small></td><td width="60" valign="top" align="right">$6.95</td>
-					</tr>
-					<tr>
-						<td width="340">Bean Noodle Spicy Salad (<small>Yum woon sen</small>) <img src="./chili.png"/><br/><div style="padding-left:20px;"><small>Bean noodles mixed with minced chicken, shrimp, onion, peanuts, Asian celery, tomato, lime juice, fresh chili and fresh garlic.  Topped with fried onion, roasted chili and cilantro.</small></div></small></td><td width="60" valign="top" align="right">$7.95</td>
-					</tr>
-					</table>
-				</div>
-
-<div style="padding-left:50px; padding-bottom:20px; padding-top:10px;">
-					<table border="0" cellpadding="3" cellspacing="0">
-					<tr> <td> <h3 align=center>Fried Rice</h3> </td></tr>
-					<tr>
-					<tr>
-						<td width="340">Chicken Fried Rice <br/><div style="padding-left:20px;"><small>Sliced chicken stir-fied with egg, carrots, bell pepper and onion.</small></div></td><td width="60" align="right">$7.25</td>
-					</tr>
-					<tr>
-						<td width="340">Shrimp or Seafood Fried Rice</td><td width="60" align="right">$8.95</td>
-					</tr>
-					<tr>
-						<td width="340">Vegetable Fried Rice <br/><div style="padding-left:20px;"><small>Egg stir-fried with tomato, carrots, bell pepper and onion.</small></div></td><td width="60" align="right">$7.25</td>
-					</tr>
-                    <tr>
-						<td width="340">Emerald Curry Fried Rice <img src="./chili.png"/><br/><div style="padding-left:20px;"><small>Spicy green curry paste stir-fried with choice of meat, bell pepper, onion and Thai basil.</small></div></td><td width="60" align="right">$7.25</td>
-					</tr>
-					<tr>
-						<td width="340">Basil Fried Rice (<small>Spicy Fried Rice</small>) <img src="./chili.png"/><br/><div style="padding-left:20px;"><small>Spicy chili paste stir-fried with choice of meat, bell pepper, onion and Thai basil.</small></div></td><td width="60" valign="top" align="right">$7.25</td>
-					</tr>
-					<tr>
-						<td width="340">Tom Yum Fried Rice <img src="./chili.png"/><br/><div style="padding-left:20px;"><small>Hot, spicy tom yum paste stir-fried with choice of meat, mushroom, Asian celery, onion and tomato.</small></div></td><td width="60" valign="top" align="right">$7.25</td>
-					</tr>
-					</table>
-				</div>
-				</div>
-
-<div style="float:left; width:475px;" align="right">
-<div style="padding-right:50px; padding-bottom:20px; padding-top:10px;">
-					<table border="0" cellpadding="3" cellspacing="0">
-					<tr> <td> <h3 align=center>Main Courses</h3> </td></tr>
-					<tr>
-					<tr>
-						<td width="340">Garlic &amp; Pepper (<small>Pad gra tiem prig Thai</small>)<br/><div style="padding-left:20px;"><small>Garlic pepper sauce with choice of stir-fried meat.</small></div></small></td><td width="60" valign="top" align="right">$8.95</td>
-					</tr>
-					<tr>
-						<td width="340">Sweet &amp; Sour Pork, Chicken<br/><div style="padding-left:20px;"><small>Stir-fried sliced pork or chicken with onion, tomato, bell pepper, and pineapple.</small></div></small></td><td width="60" valign="top" align="right">$7.95</td>
-					</tr>
-					<tr>
-						<td width="340">Sweet &amp; Sour Vegetables (<small>Pad proew wan</small>)<br/><div style="padding-left:20px;"><small>Sweet and sour sauce stir-fried with pineapple, tomato, zucchini, onion, bell pepper, baby corn and cucumbers.</small></div></small></td><td width="60" valign="top" align="right">$7.25</td>
-					</tr>
-					<tr>
-						<td width="340">Chicken &amp; Cashew (<small>Pad gai mamuang himmapan</small>)<br/><div style="padding-left:20px;"><small>Chicken sauteed with cashew nut, onion, pineapple, bell pepper and roasted chili.</small></div></small></td><td width="60" valign="top" align="right">$7.50</td>
-					</tr>
-					<tr>
-						<td width="340">Laab Chicken <img src="./chili.png"><br/><div style="padding-left:20px;"><small>Minced chicken cooked with roasted rice, chili, fresh garlic, green onion, cilantro and lime juice.</small></div></small></td><td width="60" valign="top" align="right">$7.50</td>
-					</tr>
-					<tr>
-						<td width="340">Beef with Oyster Sauce (<small>Neua pat naam man hoi</small>)<br/><div style="padding-left:20px;"><small>Stir-fried beef with oyster sauce, carrot, zucchini, onion and garlic oil.</small></div></small></td><td width="60" valign="top" align="right">$7.95</td>
-					</tr>
-					<tr>
-						<td width="340">Khao Na Gai <br/><div style="padding-left:20px;"><small>Chicken stir-fried with sweet and sour sauce, garlic oil, mushroom, onion and carrots.</small></div></small></td><td width="60" valign="top" align="right">$7.95</td>
-					</tr>
-					<tr>
-						<td width="340">Pad Kra Phow <img src="./chili.png"><br/><div style="padding-left:20px;"><small>Choice of meat stir-fried with fresh Thai chili, garlic, onion, bell pepper and Thai basil.</small></div></small></td><td width="60" valign="top" align="right">$7.95</td>
-					</tr>
-					<tr>
-						<td width="340">Mixed Vegetables<br/><div style="padding-left:20px;"><small>Napa cabbage, carrot, bell pepper, baby corn, onion, zucchini, mushroom, stir-fried with fresh garlic and dark sauce.</small></div></small></td><td width="60" valign="top" align="right">$6.95</td>
-					</tr>
-               <tr>
-						<td width="340">Rad Na Stir-fry<br/><div style="padding-left:20px;"><small>Choice of meat stir-fried with garlic oil, mushroom, carrot, tomato, onion, Asian celery, in dark sauce, topped with white pepper.</small></div></small></td><td width="60" valign="top" align="right">$7.95</td>
-					</tr>
-					<tr>
-						<td width="340">Seafood Pad Cha <img src="./chili.png"><br/><div style="padding-left:20px;"><small>Stir-fried seafood with fresh chili, fresh garlic, bell pepper, onion, and celery.</small></div></small></td><td width="60" valign="top" align="right">$8.95</td>
-					</tr>
-					</table>
-				</div>
-</div>
-
-<script src="tab.js"></script>
-
-				</body>
+</html>

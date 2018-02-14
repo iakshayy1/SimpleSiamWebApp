@@ -1,0 +1,154 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+#bcknone {
+    background-image: none;
+}
+
+.pimg1,
+.pimg2,
+.pimg3 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#secstyle {
+    background-image: url('../img/image2.jpg');
+}
+
+.pimg1 {
+    background-image: url('bck.jpg');
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url('../img/image2.jpg');
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image: url('../img/image3.jpg');
+    min-height: 400px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.ptext .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.ptext .border.trans {
+    background-color: transparent;
+}
+
+@media(max-width:568px) {
+    .pimg1,
+    .pimg2,
+    .pimg3 {
+        background-attachment: scroll;
+    }
+}
+
+.nav {
+    width: 100%;
+    background: #36002f;
+    height: 100px;
+    margin-top: 100px;
+}
+
+li {
+    float: left;
+    margin-top: 30px;
+}
+
+a {
+    width: 300px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    padding: 1;
+    border-radius: 10px;
+    font-family: Century Gothic;
+    font-weight: bold;
+}
+
+#hyperlink {
+    width: 100px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10;
+    border-radius: 10px;
+    font-family: Century Gothic;
+    font-weight: bold;
+}
+
+a:hover {
+    background: #669900;
+    transition: 0.6s;
+}
+
+nav {
+    height: 70px;
+    background: black;
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    transition: all ease .5s;
+}
+
+nav.shrink {
+    height: 60px;
+    transition: all ease .5s;
+}
+
+nav.shrink ul {
+    padding-bottom: 30px;
+    padding-left: 10px;
+    transition: all ease .5s;
+}
