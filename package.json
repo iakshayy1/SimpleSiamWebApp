@@ -9,13 +9,16 @@
     "lite": "lite-server"
   },
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "body-parser": "latest",
+    "connect-mongo": "^2.0.1",
     "ejs": "latest",
     "express": "latest",
+    "express-session": "latest",
     "mongoose": "^4.13.6",
     "morgan": "latest",
-    "nodemon": "^1.12.1",
-    "nodemailer": "latest"
+    "nodemailer": "latest",
+    "nodemon": "^1.12.1"
   },
   "repository": {
     "type": "git",
