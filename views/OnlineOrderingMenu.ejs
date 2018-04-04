@@ -1,65 +1,308 @@
-
 <!DOCTYPE html>
 <html lang="en" id="site-html" xmlns:fb="http://www.facebook.com/2008/fbml">
+
 <head>
 	<title>Simply Siam Restaurant - Maryville, MO 6468 (Menu &amp; Order Online)</title>
 
-<link rel="stylesheet" type="text/css" href="/OnlineOrdermenu.css">
+	<link rel="stylesheet" type="text/css" href="/OnlineOrdermenu.css">
 	<!-- <link href="OnlineOrdermenu.css" rel="stylesheet" /> -->
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<style>/
-.panel-heading, #expand-all, #banner-image, .rewards {border-radius: 0;}
-.navigation-link:hover {background-color:#666;}
-#social-links a {color: #555; padding: 9px; display: inline-block; border:1px solid #ccc; border-radius: 5px; margin: 2px; }
-#social-links {margin-bottom:0;}
-#social-links a:hover{background-color:#ccc;}
-.btn{border-radius:2px;}
-.well {border-radius:2px;}
-#home-section-description{border-radius:2px !important;}
-#home-hours{margin-bottom:0;}
-#home-section-name{margin-top:10px;}
-#home-section {margin-top:52px; padding-top:0 !important;}
-#home-section-votes {margin-bottom:0;}
-#location-details{border-radius:2px !important;}
-#TopNavCollapse .navmobile {border-radius: 2px;}
-@media (max-width: 767px) {#navigation {border-radius:0;} #home-section {margin-top:0px;}}#site-body { 
-  background: url(https://bloximages.chicago2.vip.townnews.com/maryvilledailyforum.com/content/tncms/assets/v3/editorial/d/e8/de855fd2-d192-11e5-9e2e-f705bbee4583/56bde96bd477e.image.jpg?resize=1200%2C900) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-background-position-y: 50px
+	<style>
+		.panel-heading,
+		#expand-all,
+		#bannerr-image,
+		.rewards {
+			border-radius: 0;
+		}
+
+		.navigation-link:hover {
+			background-color: #666;
+		}
+
+		#social-links a {
+			color: #555;
+			padding: 9px;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin: 2px;
+		}
+
+		#social-links {
+			margin-bottom: 0;
+		}
+
+		#social-links a:hover {
+			background-color: #ccc;
+		}
+
+		.btn {
+			border-radius: 2px;
+		}
+
+		.well {
+			border-radius: 2px;
+		}
+
+		#home-section-description {
+			border-radius: 2px !important;
+		}
+
+		#home-hours {
+			margin-bottom: 0;
+		}
+
+		#home-section-name {
+			margin-top: 10px;
+		}
+
+		#home-section {
+			margin-top: 52px;
+			padding-top: 0 !important;
+		}
+
+		#home-section-votes {
+			margin-bottom: 0;
+		}
+
+		#location-details {
+			border-radius: 2px !important;
+		}
+
+		#TopNavCollapse .navmobile {
+			border-radius: 2px;
+		}
+
+		@media (max-width: 767px) {
+			#navigation {
+				border-radius: 0;
+			}
+			#home-section {
+				margin-top: 0px;
+			}
+		}
+
+		#site-body {
+			background: url(https://bloximages.chicago2.vip.townnews.com/maryvilledailyforum.com/content/tncms/assets/v3/editorial/d/e8/de855fd2-d192-11e5-9e2e-f705bbee4583/56bde96bd477e.image.jpg?resize=1200%2C900) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			/*background-position-y: 10px*/
+		}
+
+		#location-details {
+			background-color: #fff;
+			padding: 0 10px 10px 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+		}
+
+		#home-section-name {
+			color: #000;
+		}
+
+		#site-body {
+			color: #fff;
+		}
+
+		#site-container {
+			background-color: #fff;
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+
+		#site-body {
+			background-color: #000000;
+		}
+
+		.panel-default>.menu-category-heading,
+		#expand-all {
+			background-color: #b60000e6;
+		}
+
+		.menu-category-name,
+		#expand-all {
+			color: #000000;
+		}
+
+		.menu-category-description {
+			color: #ffffff;
+		}
+
+		#bannerr-image {
+			margin: 0 auto;
+			float: none;
+			padding: 40px;
+			opacity: 0.9;
+
+
+		}
+
+/********************** css for side nav or cart page **************/
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-#location-details { background-color: #fff; padding: 0 10px 10px 10px; border-radius: 5px; border:1px solid #ccc; }
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
 
-#home-section-name{color:#000;}
-#site-body{color:#fff;}
+.slideBtn {
+  transition: .5s;
+  position: fixed;
+  right: 0;  
+  font-size:30px;
+  cursor:pointer;
+  margin-right:10px;
+}
 
-#site-container{background-color:#fff;background-color:rgba(255,255,255,0.9);}
+#main {
+  transition: .5s;  
+  background-color:white;
+}
 
-#site-body{background-color:#000000;}
+section{
+  padding:20px;
+}
+section+section{
+  padding-top:0;
+}
 
-.panel-default > .menu-category-heading, #expand-all{background-color:#b60000e6; }
-.menu-category-name, #expand-all{color:#000000;}
-.menu-category-description{color:#ffffff;}
+article{  
+  border-top:1px solid green;
+  background-color:gray;
+}
 
-#banner-image{margin:0 auto; float:none; padding:40px;}
-</style>
-	
-	
-<script type="text/javascript" src="/OnlineOrderingMenu.js"></script>
+
+
+
+/***********************************************************************/
+
+
+
+
+
+
+	</style>
+
+
+	<script type="text/javascript" src="/OnlineOrderingMenu.js"></script>
 </head>
-<body id="site-body" role="document">
-	
 
-<nav id="title-bar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div id="cart-top-closed" class="">
-			We are ready to serve you<br />
-			Today, 11:00 AM
+<body id="site-body" role="document" >
+
+
+<!-- ************** for side nav ************* -->
+<script>
+
+$(document).ready(function(){
+  $(".slideBtn").click(function(){    
+    if($("#sidenav").width() == 0){      
+        document.getElementById("sidenav").style.width = "250px";
+        document.getElementById("site-body").style.paddingRight = "250px";
+        document.getElementById("slidebtn").style.paddingRight = "250px";
+
+    }
+    else{
+        document.getElementById("sidenav").style.width = "0";
+        document.getElementById("site-body").style.paddingRight = "0";
+        document.getElementById("slidebtn").style.paddingRight = "0";
+    }
+  });
+});
+
+</script>
+<!-- ******************************************************** -->
+
+
+<div id="sidenav" class="sidenav">
+  <div id="slidebtn" class="slideBtn">&#9776; Click</div>  
+  <a href="#">menu1</a>
+  <a href="#">menu2</a>
+  <a href="#">menu3</a>
+  <a href="#">menu4</a>
+</div>
+
+
+
+
+	
+	<div class="navigator" style="opacity: 1.25; transform: matrix(1, 0, 0, 1, 0, 0);"> </div>
+
+ <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"> Simply Siam</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="/index">Home</a>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Menu
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="/menu">Dine-in</a>
+                        </li>
+                        <li>
+                            <a href="/menu">Pick up</a>
+                        </li>
+                        <li>
+                            <a href="/menu">Delivery</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/login">Login</a>
+                </li>
+                 <li><a href="/contact">Contact</a></li>
+                 <li><a href="/OnlineOrderingMenu">OnlineOrderingMenu</a></li>
+                 <li> </li>
+            </ul>
+            <!--    <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </form> -->
+        </div>
+    </nav>
+    <img id="bannerr-image" class="img-responsive img-rounded center-block-xs" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+	 data-src="Simply siam logo.png" />
+
+    <!-- <div id="cart-top-closed" >
+		
+			We are ready to serve you
+			<br /> Today, 11:00 AM
 		</div>
-</nav>
-<!-- <nav class="navbar navbar-inverse">
+ -->
+	<!-- <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/"> Simply Siam</a>
@@ -96,755 +339,182 @@ background-position-y: 50px
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                   </form> -->
-        </div>
-    </nav> -->
-
-
-<div id="wrapper">
-		<div id="sidebar-wrapper">
-			<form id="cart-form" action="/Home/Cart" method="post">
-				
-	<div id="cart-content" itemcount="0" totalprice='$0.00'>
-		<div id="cart-empty">
-			Add items from the menu to your cart...
-		</div>
 	</div>
-<div class="cart-credit-cards col-xs-12">
-	<div class="cart-payment-icons">
-				<img style="height:22px;" src="//sitecontent-menufycom.netdna-ssl.com/apple-pay-payment-mark.svg?lu=66822880cb8ecca6c0c71dec13e62578" alt="Accepts Apple Pay" />
-				<i class="fa fa-cc-paypal fa-lg" title="Accepts PayPal" style="font-size:18pt;color:#0070ba;"></i>
-				<img style="height:22px;" src="//sitecontent-menufycom.netdna-ssl.com/blue_venmo_acceptance_mark.svg?lu=7a3280d8dc085164952fbd8bfac0505f" alt="Accepts Venmo" />
-				<i class="fa fa-btc fa-lg" style="font-size: 22px; padding-bottom: 5px; vertical-align: bottom;color:#f7931a;" title="Accepts Bitcoin"></i>
-				<br />
-			<i class="fa fa-cc-visa fa-lg" title="Accepts Visa" style="font-size:18pt;"></i>
-			<i class="fa fa-cc-mastercard fa-lg" title="Accepts Mastercard" style="font-size:18pt;"></i>
-			<i class="fa fa-cc-discover fa-lg" title="Accepts Discover" style="font-size:18pt;"></i>
-			<i class="fa fa-cc-amex fa-lg" title="Accepts American Express" style="font-size:18pt;"></i>
-					<i class="fa fa-money fa-lg fa-fw" title="Accepts Cash" style="font-size:22pt;padding-top:1px;"></i>
+	</nav>
+
+
+	<div id="wrapper">
+
+		<div id="page-content-wrapper">
+
+			<!-- <img id="bannerr-image" class="img-responsive img-rounded center-block-xs" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="Simply siam logo.png" /> -->
+
+			<div id="site-container" class="container-fluid theme-showcase" role="main" itemscope itemtype="http://schema.org/Restaurant">
+
+
+				<!-- <div id="bannerr" class="row page-header">
+						<img id="bannerr-image" class="img-responsive img-rounded center-block-xs" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="Simply siam logo.png" />
+				</div> -->
+				<div id="topContent" class="col-xs-12">
+					<a href="/Home/ContactUs" class="btn btn-default visible-xs" data-toggle="modal" data-target="#ItemModal">
+						<i class="fa fa-map-marker fa-fw"></i> 14319 Metcalf Ave, Maryville, KS 66223
+					</a>
+
+
+
+				</div>
+				
+************************************
+<style>
+
+	.sidenav {
+	  height: 100%;
+	  width: 0;
+	  position: fixed;
+	  z-index: 1;
+	  top: 0;
+	  right: 0;
+	  background-color: #111;
+	  overflow-x: hidden;
+	  transition: 0.5s;
+	  padding-top: 60px;
+	}
+	
+	.sidenav a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+	}
+	
+	.slideBtn {
+	  transition: .5s;
+	  position: fixed;
+	  right: 0;  
+	  font-size:30px;
+	  cursor:pointer;
+	  margin-right:10px;
+	}
+	
+	#main {
+	  transition: .5s;  
+	  background-color:white;
+	}
+	
+	section{
+	  padding:20px;
+	}
+	section+section{
+	  padding-top:0;
+	}
+	
+	article{  
+	  border-top:1px solid green;
+	  background-color:gray;
+	}
+	</style>
+	
+	</head>
+	<body id ="main">
+	
+	<script>
+	
+	$(document).ready(function(){
+	  $(".slideBtn").click(function(){    
+		if($("#sidenav").width() == 0){      
+			document.getElementById("sidenav").style.width = "250px";
+			document.getElementById("main").style.paddingRight = "250px";
+			document.getElementById("slidebtn").style.paddingRight = "250px";
+	
+		}
+		else{
+			document.getElementById("sidenav").style.width = "0";
+			document.getElementById("main").style.paddingRight = "0";
+			document.getElementById("slidebtn").style.paddingRight = "0";
+		}
+	  });
+	});
+	
+	</script>
+	
+	<div >
+	  <h2>LUNCH NOODLES</h2>
+	  <p>Click on the button to toggle between showing and hiding content.</p>
+	  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">LUNCH NOODLES</button>
+	  <div id="demo" class="collapse">
+		
+	
+	
+	<div>
+					  <a onclick="clck-menu-item" role="button" class="btn btn-default col-xs-12" >
+						<span>Pad Thai</span>
+						<small >Our must-try namesake includes rice noodles stir-fried with egg, peanuts, sprouts, scallions and coated in our
+						  special savory sauce</small>
+						<span >$9.95</span>
+	
+	
+						<p>Click the button to make a BUTTON element.</p>
+	
+	<button onclick="clck-menu-item()">Try it</button>
+	
+	<script>
+	function myFunction() {
+	  var node = document.createElement("p");
+	  var textnode = document.createTextNode("Water");
+	  
+	
+	}
+	</script>
+	
+					  </a>
+					  <a role="button" class="btn btn-default col-xs-12 menu-item"  data-target="#ItemModal">
+						<span class="menu-item-name">Pad Kee Mow</span>
+						<small class="menu-item-description">Wide rice noodles are stir-fried with bell peppers, mushrooms, bok choy, and fresh basil in a tasty brown sauce</small>
+						<span class="menu-item-price">$9.95</span>
+					  </a>
+					  <a href="/padseaeawclicked" role="button" class="btn btn-default col-xs-12 menu-item" data-target="#ItemModal">
+						<span class="menu-item-name">Pad Sea Eaw</span>
+						<small class="menu-item-description">Wide rice noodles stir-fried with broccoli and bok choy come together beautifully in a brown sauce</small>
+						<span class="menu-item-price">$9.95</span>
+					  </a>
+					  <a href="/Item/324698/17995" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
+						<span class="menu-item-name">Sen Mee Pad </span>
+						<small class="menu-item-description">Extra thin rice noodles are cooked with napa cabbage, bok choy, bamboo strips, roasted garlic then lightly tossed
+						  in a brown sauce</small>
+						<span class="menu-item-price">$9.95</span>
+					  </a>
+					  <a href="/Item/123821/17995" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
+						<span class="menu-item-name">Pad Lad Nah</span>
+						<small class="menu-item-description">Wide rice noodles are tossed in a light brown sauce then topped with a stir-fried, velvety blend of fermented yellow
+						  bean sauce, broccoli, bok choy, and sauteed garlic</small>
+						<span class="menu-item-price">$9.95</span>
+					  </a>
+					  <a href="/Item/324699/17995" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
+						<span class="menu-item-name">Tom Yum Noodle</span>
+						<small class="menu-item-description">A Thai street vendor favorite, this rich, spicy sauce and classic combination of shrimp and pork is served over
+						  rice noodles and garnished with cilantro and green onion</small>
+						<span class="menu-item-price">$9.95</span>
+					  </a>
+	
+					</div>
+				  </div>
+				</div>
+	
+	
+	
+	
+	  </div>
 	</div>
 	
-</div>
-			</form>
-		</div>
-	<div id="page-content-wrapper">
-		<div id="site-container" class="container-fluid theme-showcase" role="main" itemscope itemtype="http://schema.org/Restaurant">
+	
+	
+*************************************
 
-				<div id="banner" class="row page-header">
-						<img id="banner-image" class="img-responsive img-rounded center-block-xs" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="Simply siam logo.png" />
-				</div>
-						<div id="topContent" class="col-xs-12">
-				<a href="/Home/ContactUs" class="btn btn-default visible-xs" data-toggle="modal" data-target="#ItemModal">
-					<i class="fa fa-map-marker fa-fw"></i> 14319 Metcalf Ave, Maryville, KS 66223
-				</a>
-
+				<aside>
 				
-
-			</div>
-			<div id="menu" class="col-xs-12 col-sm-12 top-buffer">
-				<div id="expand-all" class="btn btn-default">
-					<i class="fa fa-plus-circle"></i> Expand Menu
-				</div>
-				<div class="panel-group top-buffer menu-category" id="menu-categories" role="tablist" aria-multiselectable="true">
-						<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading17995" data-target="#category17995" aria-controls="#category17995">
-			<div class="panel-title accordion-toggle">
-					<div class="menu-category-image">
-						<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://9bf6ddc20002c5f1a946-ef07da46c7e506e973e0d9fa57c693df.ssl.cf1.rackcdn.com/635731049436657770+7715_400_400.jpg" alt="LUNCH NOODLES Image" />
-					</div>
-
-				<h3 class="menu-category-name">
-					LUNCH NOODLES  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-					<p class="menu-category-description"><span>Available 11 a.m - 3 p.m. (Except Sunday)</span></p>
-			</div>
-		</div>
-		<div id="category17995" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading17995">
-			<div class="panel-body">
-					<a href="/Item/123819/17995" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Thai</span>
-		<small class="menu-item-description">Our must-try namesake includes rice noodles stir-fried with egg, peanuts, sprouts, scallions and coated in our special savory sauce</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/324697/17995" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Kee Mow</span>
-		<small class="menu-item-description">Wide rice noodles are stir-fried with bell peppers, mushrooms, bok choy, and fresh basil in a tasty brown sauce</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/123820/17995" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Sea Eaw</span>
-		<small class="menu-item-description">Wide rice noodles stir-fried with broccoli and bok choy come together beautifully in a brown sauce</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/324698/17995" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Sen Mee Pad </span>
-		<small class="menu-item-description">Extra thin rice noodles are cooked with napa cabbage, bok choy, bamboo strips, roasted garlic then lightly tossed in a brown sauce</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/123821/17995" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Lad Nah</span>
-		<small class="menu-item-description">Wide rice noodles are tossed in a light brown sauce then topped with a stir-fried, velvety blend of fermented yellow bean sauce, broccoli, bok choy, and sauteed garlic</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/324699/17995" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Tom Yum Noodle</span>
-		<small class="menu-item-description">A Thai street vendor favorite, this rich, spicy sauce and classic combination of shrimp and pork is served over rice noodles and garnished with cilantro and green onion</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading35720" data-target="#category35720" aria-controls="#category35720">
-			<div class="panel-title accordion-toggle">
-
-				<h3 class="menu-category-name">
-					LUNCH CURRY  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-					<p class="menu-category-description"><span>Available 11 a.m - 3 p.m. (Except Sunday)</span></p>
-			</div>
-		</div>
-		<div id="category35720" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading35720">
-			<div class="panel-body">
-					<a href="/Item/123823/35720" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Red Curry</span>
-		<small class="menu-item-description">We are so passionate about our curries. Experience the labor of love firsthand with our red curry. A blend of Thai red chilis and spices provide the color and the distinct taste in this popular dish made with coconut milk, bamboo shoots, bell peppers, and basil.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/123822/35720" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Panang Curry</span>
-		<small class="menu-item-description">This aromatic curry is a velvety blend of peanut flavor, coconut milk, and Thai spices that are similar to red curry, but with added depth from cumin and coriander seed.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/123824/35720" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Yellow Curry</span>
-		<small class="menu-item-description">The golden yellow hue of this curry comes from the mellow, sweet and spicy yellow curry paste made with turmeric, curry powder, lemongrass, ginger, garlic, and red chilis. Coconut milk, onions, and potatoes are also found in this delicious blend of Thai and Indian flavors.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/123825/35720" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Green Curry</span>
-		<small class="menu-item-description">A creamy soft green curry made with Thai green curry paste that contains the bold flavors of Thai green chilis. The paste is cooked with coconut milk, Thai eggplant, basil, and bell pepper.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/324700/35720" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Massaman Curry </span>
-		<small class="menu-item-description">The heartiest of our curries, massaman curry is a fragrant, mild curry made with Thai spices, Thai chili paste, coconut milk, onions, potatoes, and peanuts.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading35721" data-target="#category35721" aria-controls="#category35721">
-			<div class="panel-title accordion-toggle">
-
-				<h3 class="menu-category-name">
-					LUNCH RICE DISHES  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-					<p class="menu-category-description"><span>Available 11 a.m - 3 p.m. (Except Sunday)</span></p>
-			</div>
-		</div>
-		<div id="category35721" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading35721">
-			<div class="panel-body">
-					<a href="/Item/123832/35721" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Fried Rice</span>
-		<small class="menu-item-description">Classic fried rice stir-fried with onions, scallions and an egg</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/123826/35721" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Basil Fried Rice</span>
-		<small class="menu-item-description">Our fried rice with Thai basil, bell peppers, and onions</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/324701/35721" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pineapple Fried Rice with Shrimp</span>
-		<small class="menu-item-description">Our fried rice with shrimp, pineapple, cashews, raisins, and roasted garlic</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/324702/35721" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Yellow Curry Fried Rice </span>
-		<small class="menu-item-description">Fried rice stir-fried with yellow curry, onions, scallions and an egg</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading35722" data-target="#category35722" aria-controls="#category35722">
-			<div class="panel-title accordion-toggle">
-
-				<h3 class="menu-category-name">
-					LUNCH STIR-FRY  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-					<p class="menu-category-description"><span>Available 11 a.m - 3 p.m. (Except Sunday)</span></p>
-			</div>
-		</div>
-		<div id="category35722" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading35722">
-			<div class="panel-body">
-					<a href="/Item/123828/35722" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Gapow</span>
-		<small class="menu-item-description">This popular Thai staple starts with your choice of chicken, pork, or beef that is stir-fried with Thai basil, bell peppers and topped with two fried eggs.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/324703/35722" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Basil</span>
-		<small class="menu-item-description">The aromatic sweet Thai basil in this dish will awaken your senses in a brown garlic sauce stir-fried with bamboo strips, jalapenos and bell peppers.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/324704/35722" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Garlic &amp; Pepper</span>
-		<small class="menu-item-description">Garlic and black pepper season this stir-fry of scallions, jalape&#241;os, and onions served on a bed of cabbage.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/324705/35722" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Ginger </span>
-		<small class="menu-item-description">This stir-fry of julienned ginger, mushrooms, onions, bell peppers, and scallions in a brown garlic sauce is full of fresh ginger flavor.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/324706/35722" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Prik</span>
-		<small class="menu-item-description">A spicy stir-fry of fresh green beans, lemongrass, mushrooms, and bell peppers in a sauce flavored with red curry paste.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/324707/35722" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Cashew</span>
-		<small class="menu-item-description">Cashews, bell peppers, broccoli, and onions are saut&#233;ed in brown garlic sauce.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/123829/35722" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Royal Thai Chicken</span>
-		<small class="menu-item-description">Chicken breast sliced and marinated in garlic and rum, then sauteed with shiitake mushrooms in a ginger garlic sauce. Served with a side of steamed rice.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-	<a href="/Item/123831/35722" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Tamarind Chicken</span>
-		<small class="menu-item-description">Chicken stir-fried with mixed vegetables in a tamarind sauce.</small>
-		<span class="menu-item-price">$9.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading17997" data-target="#category17997" aria-controls="#category17997">
-			<div class="panel-title accordion-toggle">
-					<div class="menu-category-image">
-						<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://9bf6ddc20002c5f1a946-ef07da46c7e506e973e0d9fa57c693df.ssl.cf1.rackcdn.com/635731041612069622+7705_400_400.jpg" alt="STARTERS Image" />
-					</div>
-
-				<h3 class="menu-category-name">
-					STARTERS  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-			</div>
-		</div>
-		<div id="category17997" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading17997">
-			<div class="panel-body">
-					<a href="/Item/324684/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Appetizer Sampler</span>
-		<small class="menu-item-description">There is something for everyone on this platter of favorites including spring rolls, egg rolls, crab Rangoon and chicken satay. </small>
-		<span class="menu-item-price">$13.95</span>
-	</a>
-	<a href="/Item/123839/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Edamame</span>
-		<small class="menu-item-description">Perfectly steamed soybeans in the pod, lightly salted</small>
-		<span class="menu-item-price">$4.95</span>
-	</a>
-	<a href="/Item/123845/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Crab Rangoon </span>
-		<small class="menu-item-description">Lightly, crispy wontons stuffed with a silky mixture of cream cheese and crab meat. Served with a sweet, red sauce</small>
-		<span class="menu-item-price">$7.95</span>
-	</a>
-	<a href="/Item/324686/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Basil Wings </span>
-		<small class="menu-item-description">Crispy fried chicken wings bathed in our rich Thai basil sauce.</small>
-		<span class="menu-item-price">$7.95</span>
-	</a>
-	<a href="/Item/123840/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Potstickers </span>
-		<small class="menu-item-description">Your choice of chicken or vegetable stuffed dumplings. Hand-crimped then steamed or pan-fried and served with a dipping sauce</small>
-		<span class="menu-item-price">$6.95</span>
-	</a>
-	<a href="/Item/324682/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Summer Rolls</span>
-		<small class="menu-item-description">Soft rolls filled with a blend of cream cheese, lump crab meat and fresh vegetables </small>
-		<span class="menu-item-price">$7.95</span>
-	</a>
-	<a href="/Item/123842/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pork Spring Rolls </span>
-		<small class="menu-item-description">Tender pork and fresh vegetables wrapped in rice paper and served with a sweet peanut dipping sauce</small>
-		<span class="menu-item-price">$6.95</span>
-	</a>
-	<a href="/Item/123841/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Vegetable Spring Rolls </span>
-		<small class="menu-item-description">Our freshly-made, meatless spring rolls are wrapped in rice paper and served with a sweet peanut dipping sauce</small>
-		<span class="menu-item-price">$6.95</span>
-	</a>
-	<a href="/Item/123844/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pork Egg Rolls </span>
-		<small class="menu-item-description">Lightly fried spring rolls served with a sweet dipping sauce</small>
-		<span class="menu-item-price">$6.95</span>
-	</a>
-	<a href="/Item/123843/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Deluxe Rolls </span>
-		<small class="menu-item-description">The best of both worlds: two spring rolls and two pork egg rolls. Served with a sweet dipping sauce</small>
-		<span class="menu-item-price">$7.95</span>
-	</a>
-	<a href="/Item/324683/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Shrimp Wraps</span>
-		<small class="menu-item-description">Steamed, butterflied shrimp stuffed with a tasty blend of shrimp, pork, chicken, jalapeno, and cilantro then wrapped in a wonton and lightly fried. Served with a sweet chili dipping sauce. </small>
-		<span class="menu-item-price">$8.95</span>
-	</a>
-	<a href="/Item/123848/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Chicken Satays</span>
-		<small class="menu-item-description">Juicy, tender grilled chicken served skewered with a peanut dipping sauce and fresh cucumber salad</small>
-		<span class="menu-item-price">$7.95</span>
-	</a>
-	<a href="/Item/123847/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Tiger Cry Beef</span>
-		<small class="menu-item-description">Tender strips of grilled, Thai-spiced beef served with a special house-made spicy dipping sauce that has been known to bring a tiger to tears</small>
-		<span class="menu-item-price">$8.95</span>
-	</a>
-	<a href="/Item/123849/17997" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Mini Pork Ribs</span>
-		<small class="menu-item-description">A Thai-favorite. Cross cut ribs marinated in a sweet, garlicky blend then fried to a crispy, juicy finish</small>
-		<span class="menu-item-price">$7.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading17999" data-target="#category17999" aria-controls="#category17999">
-			<div class="panel-title accordion-toggle">
-					<div class="menu-category-image">
-						<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://9bf6ddc20002c5f1a946-ef07da46c7e506e973e0d9fa57c693df.ssl.cf1.rackcdn.com/635731042037858198+7707_400_400.jpg" alt="SALAD Image" />
-					</div>
-
-				<h3 class="menu-category-name">
-					SALAD  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-			</div>
-		</div>
-		<div id="category17999" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading17999">
-			<div class="panel-body">
-					<a href="/Item/123860/17999" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Laab</span>
-		<small class="menu-item-description">A 300 year-old dish composed of your choice of steamed chicken, pork, beef, or shrimp tossed with fresh herbs including mint, lemongrass, cilantro, and kaffir lime leaves. Garnished with lightly toasted ground rice</small>
-		<span class="menu-item-price">$11.95</span>
-	</a>
-	<a href="/Item/123859/17999" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Yum Nua (Mint Beef Salad)</span>
-		<small class="menu-item-description">Thinly sliced beef, grilled and served with scallions, tomatoes, cucumbers, and toasted Thai chilis on a bed of crisp greens. Lightly dressed in lime juice and mint</small>
-		<span class="menu-item-price">$11.95</span>
-	</a>
-	<a href="/Item/123861/17999" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Grilled Chicken Peanut Salad</span>
-		<small class="menu-item-description">Our signature chicken satay on top of crisp greens, carrots, green onion, and red onion dressed in a creamy house peanut dressing</small>
-		<span class="menu-item-price">$10.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading17998" data-target="#category17998" aria-controls="#category17998">
-			<div class="panel-title accordion-toggle">
-					<div class="menu-category-image">
-						<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://9bf6ddc20002c5f1a946-ef07da46c7e506e973e0d9fa57c693df.ssl.cf1.rackcdn.com/635731054879759084+7712_400_400.jpg" alt="SOUP Image" />
-					</div>
-
-				<h3 class="menu-category-name">
-					SOUP  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-			</div>
-		</div>
-		<div id="category17998" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading17998">
-			<div class="panel-body">
-					<a href="/Item/325937/17998" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Tom Yum</span>
-		<small class="menu-item-description">Lemongrass, kaffir lime, and chili flavor the broth for the base of this delicious spicy and sour soup. Made with your choice of meat and topped with mushrooms, tomatoes, and cilantro</small>
-		<span class="menu-item-price">Click For Price</span>
-	</a>
-	<a href="/Item/325938/17998" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Tom Kha (Thai Coconut Soup)</span>
-		<small class="menu-item-description">A Thai-staple that has quickly become an American favorite. Coconut milk and chicken broth are infused with lemongrass, kaffir lime, Thai chilis, and galanga to create the perfect sour and spicy background for this tasty soup made with your choice of meat. Garnished with mushrooms, scallions, and cilantro</small>
-		<span class="menu-item-price">Click For Price</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading35724" data-target="#category35724" aria-controls="#category35724">
-			<div class="panel-title accordion-toggle">
-
-				<h3 class="menu-category-name">
-					SIGNATURE DISHES   <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-			</div>
-		</div>
-		<div id="category35724" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading35724">
-			<div class="panel-body">
-					<a href="/Item/324746/35724" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Bangkok Shrimp</span>
-		<small class="menu-item-description">A tasty combination of saut&#233;ed jumbo shrimp, fresh mushrooms, bell peppers, and onions with a smoky Thai chili sauce.</small>
-		<span class="menu-item-price">$19.95</span>
-	</a>
-	<a href="/Item/324747/35724" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Crab Fried Rice </span>
-		<small class="menu-item-description">Classic fried rice paired with the delicate sweetness of lump crab meat will soon become your favorite.</small>
-		<span class="menu-item-price">$18.95</span>
-	</a>
-	<a href="/Item/324748/35724" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Gapow</span>
-		<small class="menu-item-description">This popular Thai staple starts with your choice of chicken, pork, or beef that is stir-fried with Thai basil, bell peppers and topped with two fried eggs.</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/324749/35724" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Crispy Garlic Shrimp</span>
-		<small class="menu-item-description">Jumbo shell-on shrimp are flash-fried then saut&#233;ed with a tasty caramelized garlic sauce and served on a bed of steamed vegetables.</small>
-		<span class="menu-item-price">$19.95</span>
-	</a>
-	<a href="/Item/324750/35724" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Samui Scallops </span>
-		<small class="menu-item-description">Jumbo scallops are the star of this spicy and sweet stir-fry made with pineapple, bell peppers, onion, scallions, cashews, and a smoky Thai chili sauce.</small>
-		<span class="menu-item-price">$19.95</span>
-	</a>
-	<a href="/Item/324751/35724" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Yellow Curry Seafood </span>
-		<small class="menu-item-description">The perfect blend of sweet, salty, and spicy makes the yellow curry our absolute favorite. Add jumbo scallops,shrimp, squid, mussels, and fresh vegetables, and you have one dreamy dish.</small>
-		<span class="menu-item-price">$19.95</span>
-	</a>
-	<a href="/Item/324752/35724" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Gang Pet Ped Yang </span>
-		<small class="menu-item-description">Spicy Duck Curry, Slow-roasted duck with crispy skin is enveloped in a decadent red curry sauce with cashews and pineapple.</small>
-		<span class="menu-item-price">$19.95</span>
-	</a>
-	<a href="/Item/324753/35724" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Roasted Duck Panang Curry</span>
-		<small class="menu-item-description">This aromatic curry boasts smooth peanut, coconut milk, and Thai spice flavors and is served with roasted duck over a bed of mixed vegetables.</small>
-		<span class="menu-item-price">$19.95</span>
-	</a>
-	<a href="/Item/324754/35724" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Royal Thai Chicken</span>
-		<small class="menu-item-description">Chicken breast is marinated in garlic and rum then thinly sliced and stir-fried with shiitake mushrooms and julienned ginger in a rich garlic sauce.</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/324755/35724" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Crispy Catfish </span>
-		<small class="menu-item-description">A crispy, perfectly fried catfish fillet topped with your choice of house made sauce. Choice of sauce are Sam Rod Sauce: This classic sauce is made up of three flavors: sweet, sour, and mild spices. Basil Sauce: Fresh basil is the standout in this stir-fry sauce. Red Curry Sauce: Our unforgettable red curry sauce goes great with everything, including crispy catfish.</small>
-		<span class="menu-item-price">$18.95</span>
-	</a>
-	<a href="/Item/324756/35724" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Salmon Panang Curry </span>
-		<small class="menu-item-description">A bed of mixed vegetables is topped with a juicy, steamed salmon fillet and then covered in our panang curry sauce.</small>
-		<span class="menu-item-price">$15.95</span>
-	</a>
-	<a href="/Item/324757/35724" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Seafood Pad Thai </span>
-		<small class="menu-item-description">This elevated version of our signature pad Thai features shrimp, scallops, squid, mussels, and crab meat.</small>
-		<span class="menu-item-price">$19.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading35725" data-target="#category35725" aria-controls="#category35725">
-			<div class="panel-title accordion-toggle">
-
-				<h3 class="menu-category-name">
-					STIR-FRY  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-			</div>
-		</div>
-		<div id="category35725" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading35725">
-			<div class="panel-body">
-					<a href="/Item/324762/35725" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Basil </span>
-		<small class="menu-item-description">The aromatic sweet Thai basil in this dish will awaken your senses in a brown garlic sauce stir-fried with bamboo strips, jalapenos, and bell peppers</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/324763/35725" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Garlic &amp; Pepper </span>
-		<small class="menu-item-description">Garlic and black pepper season this stir-fry of scallions, jalapenos, and onions served on a bed of cabbage</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/324764/35725" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Ginger  </span>
-		<small class="menu-item-description">This stir-fry of julienned ginger, mushrooms, onions, bell peppers, and scallions in a brown garlic sauce is full of fresh ginger flavor</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/324765/35725" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Prik </span>
-		<small class="menu-item-description">A spicy stir-fry of fresh green beans, lemongrass, mushrooms, and bell peppers in a sauce flavored with red curry paste</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/324766/35725" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Cashew </span>
-		<small class="menu-item-description">Cashews, bell peppers, broccoli, and onions are sauteed in brown garlic sauce</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/324767/35725" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Tamarind Chicken </span>
-		<small class="menu-item-description">The rich, sweet, and sour components of our tamarind sauce with bell peppers and onions is served over a bed of mixed vegetables</small>
-		<span class="menu-item-price">$13.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading18004" data-target="#category18004" aria-controls="#category18004">
-			<div class="panel-title accordion-toggle">
-					<div class="menu-category-image">
-						<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://9bf6ddc20002c5f1a946-ef07da46c7e506e973e0d9fa57c693df.ssl.cf1.rackcdn.com/635731042596114834+7709_400_400.jpg" alt="NOODLES Image" />
-					</div>
-
-				<h3 class="menu-category-name">
-					NOODLES  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-			</div>
-		</div>
-		<div id="category18004" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading18004">
-			<div class="panel-body">
-					<a href="/Item/123873/18004" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Thai</span>
-		<small class="menu-item-description">Our must-try namesake includes rice noodles stir-fried with egg, peanuts, sprouts, scallions and coated in our special savory sauce</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/123877/18004" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Kee Mow (Drunken Noodle)</span>
-		<small class="menu-item-description">Wide rice noodles are stir-fried with bell peppers, mushrooms, bok choy, and fresh basil in a tasty brown sauce</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/123874/18004" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Sea Eaw</span>
-		<small class="menu-item-description">Wide rice noodles stir-fried with broccoli and bok choy come together beautifully in a brown sauce</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/123875/18004" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Sen Mee Pad</span>
-		<small class="menu-item-description">Extra thin rice noodles are cooked with napa cabbage, bok choy, bamboo strips, roasted garlic then lightly tossed in a brown sauce</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/123876/18004" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pad Lad Nah</span>
-		<small class="menu-item-description">Wide rice noodles are tossed in a light brown sauce then topped with a stir-fried, velvety blend of fermented yellow bean sauce, broccoli, bok choy, and sauteed garlic</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/324759/18004" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Tom Yum Noodle </span>
-		<small class="menu-item-description">A Thai street vendor favorite, this rich, spicy sauce and classic combination of shrimp and pork is served over rice noodles and garnished with cilantro and green onion</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/325955/18004" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Thai Beef Noodle</span>
-		<small class="menu-item-description">This is an excellent beef noodle soup that never fails to please. We had a broth that was dark, rich and bursting with flavors.</small>
-		<span class="menu-item-price">$11.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading18005" data-target="#category18005" aria-controls="#category18005">
-			<div class="panel-title accordion-toggle">
-					<div class="menu-category-image">
-						<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://9bf6ddc20002c5f1a946-ef07da46c7e506e973e0d9fa57c693df.ssl.cf1.rackcdn.com/635731042431164344+7708_400_400.jpg" alt="RICE  Image" />
-					</div>
-
-				<h3 class="menu-category-name">
-					RICE   <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-			</div>
-		</div>
-		<div id="category18005" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading18005">
-			<div class="panel-body">
-					<a href="/Item/123883/18005" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Fried Rice</span>
-		<small class="menu-item-description">Classic fried rice stir-fried with onions, scallions and an egg</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/123882/18005" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Basil Fried Rice</span>
-		<small class="menu-item-description">Our fried rice with Thai basil, bell peppers, and onions</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-	<a href="/Item/123880/18005" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Pineapple Fried Rice with Shrimp</span>
-		<small class="menu-item-description">Our fried rice with shrimp, pineapple, cashews, raisins, and roasted garlic</small>
-		<span class="menu-item-price">$15.95</span>
-	</a>
-	<a href="/Item/123881/18005" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Yellow Curry Fried Rice</span>
-		<small class="menu-item-description">Fried rice stir-fried with yellow curry, onions, scallions and an egg</small>
-		<span class="menu-item-price">$12.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading18006" data-target="#category18006" aria-controls="#category18006">
-			<div class="panel-title accordion-toggle">
-					<div class="menu-category-image">
-						<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://9bf6ddc20002c5f1a946-ef07da46c7e506e973e0d9fa57c693df.ssl.cf1.rackcdn.com/635731045698612950+7713_400_400.jpg" alt="CURRY Image" />
-					</div>
-
-				<h3 class="menu-category-name">
-					CURRY  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-			</div>
-		</div>
-		<div id="category18006" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading18006">
-			<div class="panel-body">
-					<a href="/Item/123885/18006" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Red Curry</span>
-		<small class="menu-item-description">We are so passionate about our curries. Experience the labor of love firsthand with our red curry. A blend of Thai red chilis and spices provide the color and the distinct taste in this popular dish made with coconut milk, bamboo shoots, bell peppers, and basil.</small>
-		<span class="menu-item-price">$11.95</span>
-	</a>
-	<a href="/Item/123884/18006" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Panang Curry</span>
-		<small class="menu-item-description">This aromatic curry is a velvety blend of peanut flavor, coconut milk, and Thai spices that are similar to red curry, but with added depth from cumin and coriander seed.</small>
-		<span class="menu-item-price">$11.95</span>
-	</a>
-	<a href="/Item/123886/18006" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Yellow Curry</span>
-		<small class="menu-item-description">The golden yellow hue of this curry comes from the mellow, sweet and spicy yellow curry paste made with turmeric, curry powder, lemongrass, ginger, garlic, and red chilis. Coconut milk, onions, and potatoes are also found in this delicious blend of Thai and Indian flavors.</small>
-		<span class="menu-item-price">$11.95</span>
-	</a>
-	<a href="/Item/123887/18006" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Green Curry</span>
-		<small class="menu-item-description">A creamy soft green curry made with Thai green curry paste that contains the bold flavors of Thai green chilis. The paste is cooked with coconut milk, Thai eggplant, basil, and bell pepper.</small>
-		<span class="menu-item-price">$11.95</span>
-	</a>
-	<a href="/Item/324760/18006" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Massaman Curry  </span>
-		<small class="menu-item-description">The heartiest of our curries, massaman curry is a fragrant, mild curry made with Thai spices, Thai chili paste, coconut milk, onions, potatoes, and peanuts.</small>
-		<span class="menu-item-price">$11.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading18011" data-target="#category18011" aria-controls="#category18011">
-			<div class="panel-title accordion-toggle">
-
-				<h3 class="menu-category-name">
-					SIDES  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-			</div>
-		</div>
-		<div id="category18011" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading18011">
-			<div class="panel-body">
-					<a href="/Item/123912/18011" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Sticky Rice</span>
-		<small class="menu-item-description"></small>
-		<span class="menu-item-price">$3.95</span>
-	</a>
-	<a href="/Item/123913/18011" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Steamed Rice</span>
-		<small class="menu-item-description"></small>
-		<span class="menu-item-price">$1.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading18012" data-target="#category18012" aria-controls="#category18012">
-			<div class="panel-title accordion-toggle">
-					<div class="menu-category-image">
-						<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://9bf6ddc20002c5f1a946-ef07da46c7e506e973e0d9fa57c693df.ssl.cf1.rackcdn.com/635731047216080789+7714_400_400.jpg" alt="DESSERTS Image" />
-					</div>
-
-				<h3 class="menu-category-name">
-					DESSERTS  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-			</div>
-		</div>
-		<div id="category18012" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading18012">
-			<div class="panel-body">
-					<a href="/Item/123914/18012" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Fried Banana with Ice Cream</span>
-		<small class="menu-item-description">Choose from the following flavors: macapuno (made with real,sweet coconut sport), green tea (made with real green tea), ube (made with real purple yam), or mango (made with real Philippine mango).</small>
-		<span class="menu-item-price">$5.95</span>
-	</a>
-	<a href="/Item/123915/18012" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Khewneeow Mamoung (Seasonal)</span>
-		<small class="menu-item-description">Mango with sticky rice smothered in sweet coconut milk.</small>
-		<span class="menu-item-price">$6.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-	<div class="panel panel-default">
-		<div class="panel-heading menu-category-heading collapsed" data-toggle="collapse" aria-expanded="false" role="tab" id="heading18013" data-target="#category18013" aria-controls="#category18013">
-			<div class="panel-title accordion-toggle">
-
-				<h3 class="menu-category-name">
-					BEVERAGES  <span class="pull-right category-arrow"><i class="fa fa-chevron-down"></i></span>
-				</h3>
-
-			</div>
-		</div>
-		<div id="category18013" class="menu-category-items panel-collapse collapse" role="tabpanel" aria-labelledby="heading18013">
-			<div class="panel-body">
-					<a href="/Item/123916/18013" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Thai Iced Tea with Cream</span>
-		<small class="menu-item-description"></small>
-		<span class="menu-item-price">$3.95</span>
-	</a>
-	<a href="/Item/123917/18013" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Thai Iced Coffee with Cream</span>
-		<small class="menu-item-description"></small>
-		<span class="menu-item-price">$3.95</span>
-	</a>
-	<a href="/Item/123918/18013" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Soft Drinks</span>
-		<small class="menu-item-description"></small>
-		<span class="menu-item-price">$2.50</span>
-	</a>
-	<a href="/Item/123919/18013" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Iced Tea</span>
-		<small class="menu-item-description"></small>
-		<span class="menu-item-price">$2.00</span>
-	</a>
-	<a href="/Item/123920/18013" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Hot Jasmine Tea</span>
-		<small class="menu-item-description"></small>
-		<span class="menu-item-price">$2.50</span>
-	</a>
-	<a href="/Item/123921/18013" role="button" class="btn btn-default col-xs-12 menu-item" data-toggle="modal" data-target="#ItemModal">
-		<span class="menu-item-name">Fiji Bottled Water</span>
-		<small class="menu-item-description"></small>
-		<span class="menu-item-price">$3.95</span>
-	</a>
-
-			</div>
-		</div>
-	</div> 
-				</div>
-			</div>
+				</aside>
 				<div id="home-section" class="col-xs-12 col-sm-4 top-buffer">
 					<div id="location-details" class="">
 						<h1 id="home-section-name" itemprop="name">Simply Siam Restaurant</h1>
@@ -854,7 +524,8 @@ background-position-y: 50px
 					<div id="home-section-address" class="top-buffer" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 						<a href="/Home/ContactUs" class="btn btn-default btn-block" data-toggle="modal" data-target="#ItemModal">
 							<i class="fa fa-map-marker fa-fw"></i>
-							<span itemprop="streetAddress">14319 Metcalf Ave</span><br>
+							<span itemprop="streetAddress">14319 Metcalf Ave</span>
+							<br>
 							<span itemprop="addressLocality">Maryville</span>,
 							<span itemprop="addressRegion">MO</span>
 							<span itemprop="postalCode">64468</span>
@@ -863,47 +534,49 @@ background-position-y: 50px
 					</div>
 
 					<div id="home-section-phone" class="top-buffer">
-						<a href="tel:(913) 685-4500" class="btn btn-default btn-block" itemprop="telephone" content="(913) 685-4500"><i class="fa fa-phone fa-fw"></i> (913) 685-4500</a>
+						<a href="tel:(913) 685-4500" class="btn btn-default btn-block" itemprop="telephone" content="(913) 685-4500">
+							<i class="fa fa-phone fa-fw"></i> (913) 685-4500</a>
 					</div>
 
-						<div id="home-section-votes" class="top-buffer well" itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating">
-							<meta itemprop="ratingValue" content="99">
-							<meta itemprop="reviewCount" content="306">
-							<meta itemprop="bestRating" content="100">
-							<meta itemprop="worstRating" content="0">
-							<h4><i class="fa fa-thumbs-o-up fa-fw"></i> 99%</h4> of 306 customers recommended
-						</div>
+					<div id="home-section-votes" class="top-buffer well" itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating">
+						<meta itemprop="ratingValue" content="99">
+						<meta itemprop="reviewCount" content="306">
+						<meta itemprop="bestRating" content="100">
+						<meta itemprop="worstRating" content="0">
+						<h4>
+							<i class="fa fa-thumbs-o-up fa-fw"></i> 99%</h4> of 306 customers recommended
+					</div>
 
 					<div id="home-hours" class="well top-buffer">
 						<div>
-							
-<div id="hours-header" class="hours-title">Hours of Business</div>
-<div id="hours-list" class="hours-list">
-		<div class="hours-entry">
-			<div class="hours-day">
-Sunday			</div>
 
-					<div class="hours-time">
-						12:00 PM - 9:00 PM
-							<span class="hidden" itemprop="openingHours">Su 12:00-21:00</span>
-					</div>
-		</div>
-		<div class="hours-entry">
-			<div class="hours-day">
-Monday - Saturday			</div>
+							<div id="hours-header" class="hours-title">Hours of Business</div>
+							<div id="hours-list" class="hours-list">
+								<div class="hours-entry">
+									<div class="hours-day">
+										Sunday </div>
 
-					<div class="hours-time">
-						11:00 AM - 10:00 PM
-							<span class="hidden" itemprop="openingHours">Mo,Tu,We,Th,Fr,Sa 11:00-22:00</span>
-					</div>
-		</div>
-</div>
+									<div class="hours-time">
+										12:00 PM - 9:00 PM
+										<span class="hidden" itemprop="openingHours">Su 12:00-21:00</span>
+									</div>
+								</div>
+								<div class="hours-entry">
+									<div class="hours-day">
+										Monday - Saturday </div>
+
+									<div class="hours-time">
+										11:00 AM - 10:00 PM
+										<span class="hidden" itemprop="openingHours">Mo,Tu,We,Th,Fr,Sa 11:00-22:00</span>
+									</div>
+								</div>
+							</div>
 						</div>
 
 
 					</div>
 
-						<!-- <div id="social-links" class="top-buffer well">
+					<!-- <div id="social-links" class="top-buffer well">
 							<div id="social-links-title">Share on:</div>
 							<a href="https://facebook.com/sharer.php?u=http%3a%2f%2fwww.PadThaiOP.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
 							<a href="https://plus.google.com/share?url=http%3a%2f%2fwww.PadThaiOP.com" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>
@@ -925,26 +598,43 @@ Monday - Saturday			</div>
 							</a>
 					</div> -->
 				</div>
-							<footer id="footer" class="col-xs-12">
+				<footer id="footer" class="col-xs-12">
 					<hr />
-					<div id="footer-copyright">&copy; 2018 <a href= target="_blank">Simplysiam.com</a> All rights reserved.</div> <div id="footer-links"><a href="https://Simplysiam/privacy-policy.html" target="_blank">Privacy Policy</a> &#124; <a href="https://Simplysiam.com/customer-faq" target="_blank">FAQ</a></div>
+					<div id="footer-copyright">&copy; 2018
+						<a href=t arget="_blank">Simplysiam.com</a> All rights reserved.</div>
+					<div id="footer-links">
+						<a href="https://Simplysiam/privacy-policy.html" target="_blank">Privacy Policy</a> &#124;
+						<a href="https://Simplysiam.com/customer-faq" target="_blank">FAQ</a>
+					</div>
 				</footer>
+			</div>
 		</div>
+		<!-- /#page-content-wrapper -->
 	</div>
-	<!-- /#page-content-wrapper -->
-</div>
-<!-- /#wrapper -->
+	<!-- /#wrapper -->
 
-<div class="modal fade" id="ItemModal" tabindex="-1" role="dialog" aria-labelledby="ItemModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;
-			</span><span class="sr-only">Close</span></button><h4>Loading...</h4></div><div class="modal-body">
-			<div class="text-center"><i class="fa fa-spinner fa-spin fa-2x"></i></div></div><div class="modal-footer"></div>
+	<div class="modal fade" id="ItemModal" tabindex="-1" role="dialog" aria-labelledby="ItemModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;
+						</span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h4>Loading...</h4>
+				</div>
+				<div class="modal-body">
+					<div class="text-center">
+						<i class="fa fa-spinner fa-spin fa-2x"></i>
+					</div>
+				</div>
+				<div class="modal-footer"></div>
+			</div>
 		</div>
 	</div>
-</div>
 
 
 </body>
+
 </html>
