@@ -16,7 +16,8 @@
     "mongoose": "^4.13.6",
     "morgan": "latest",
     "nodemailer": "latest",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "bcrypt": "latest"
   },
   "repository": {
     "type": "git",
