@@ -9,12 +9,10 @@
     "lite": "lite-server"
   },
   "dependencies": {
-    "bcrypt": "^1.0.3",
     "body-parser": "latest",
-    "connect-mongo": "^2.0.1",
     "ejs": "latest",
     "express": "latest",
-    "express-session": "latest",
+    "kill-port": "^1.1.0",
     "mongoose": "^4.13.6",
     "morgan": "latest",
     "nodemailer": "latest",
