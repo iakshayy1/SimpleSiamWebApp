@@ -6,8 +6,6 @@
     Author: BootstrapMade.com
     Author URL: https://bootstrapmade.com
 */
-
-
 /*
 body {
 	font-size: 15px;
@@ -482,211 +480,64 @@ table {
 
  */
 
-
 /*    menu    */
-
-body,
-html {
-    height: 100%;
-    margin: 0;
-    font-size: 20px;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    line-height: 1.8em;
-    color: #666;
-}
-
-.pimg1,
-.pimg2,
-.pimg3 {
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-#secstyle {
-    background-image: url('../img/image2.jpg');
-}
-
-.pimg1 {
-    background-image: url('bck.jpg');
-    min-height: 100%;
-}
-
-.pimg2 {
-    background-image: url('../img/image2.jpg');
-    min-height: 400px;
-}
-
-.pimg3 {
-    background-image: url('../img/image3.jpg');
-    min-height: 400px;
-}
-
-.section {
-    text-align: center;
-    padding: 50px 80px;
-}
-
-.section-light {
-    background-color: #f4f4f4;
-    color: #666;
-}
-
-.section-dark {
-    background-color: #282e34;
-    color: #ddd;
-}
-
-.ptext {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    color: #000;
-    font-size: 27px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.ptext .border {
-    background-color: #111;
-    color: #fff;
-    padding: 20px;
-}
-
-.ptext .border.trans {
-    background-color: transparent;
-}
-
-@media(max-width:568px) {
-    .pimg1,
-    .pimg2,
-    .pimg3 {
-        background-attachment: scroll;
-    }
-}
-
-.nav {
-    width: 100%;
-    background: #36002f;
-    height: 100px;
-    margin-top: 100px;
-}
-
-li {
-    float: left;
-    margin-top: 30px;
-}
-
-a {
-    width: 300px;
-    color: white;
-    display: block;
-    text-decoration: none;
-    font-size: 20px;
-    text-align: center;
-    padding: 1;
-    border-radius: 10px;
-    font-family: Century Gothic;
-    font-weight: bold;
-}
-
-#hyperlink {
-    width: 100px;
-    color: white;
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    padding: 10;
-    border-radius: 10px;
-    font-family: Century Gothic;
-    font-weight: bold;
-}
-
-a:hover {
-    background: #669900;
-    transition: 0.6s;
-}
-
-nav {
-    height: 70px;
-    background: black;
-    display: block;
-    position: fixed;
-    width: 100%;
-    z-index: 99999;
-    transition: all ease .5s;
-}
-
-nav.shrink {
-    height: 60px;
-    transition: all ease .5s;
-}
-
-nav.shrink ul {
-    padding-bottom: 30px;
-    padding-left: 10px;
-    transition: all ease .5s;
-}
-
-.menu {
+.menu{
     width: 100%;
     overflow: hidden;
     border-top: 4px solid #f34949;
     padding-bottom: 100px;
+    
+
+
 }
 
-.menu .menu_title {
+.menu .menu_title{
     text-align: center;
     margin-bottom: 80px;
 }
 
-.menu .menu_title h2 {
+.menu .menu_title h2{
     display: inline-block;
     margin: 0;
     padding: 20px 25px 35px 25px;
-    background: url('../img/ribbon.svg') no-repeat;
+    /*background: url('../img/ribbon.svg') no-repeat;*/
+   
     background-position: 50% 0;
+
     color: #fff;
     font-family: "aleo-bold", arial;
     font-size: 20px;
     font-weight: bold;
 }
 
-.menu article {
+
+.menu article{
     width: 490px;
 }
 
-.menu .mean_menu {
+.menu .mean_menu{
     overflow: hidden;
 }
 
-.menu .hidden_items {
+.menu .hidden_items{
     display: none;
     overflow: hidden;
 }
 
-.menu article.lmenu {
+.menu article.lmenu{
     float: left;
 }
 
-.menu article.rmenu {
+.menu article.rmenu{
     float: right;
 }
 
-.menu article ul {
+.menu article ul{
     overflow: hidden;
-    list-style: none;
+    list-style: none;    
 }
 
-.menu article ul li {
+.menu article ul li{
     display: block;
     width: 100%;
     overflow: hidden;
@@ -694,12 +545,12 @@ nav.shrink ul {
     position: relative;
 }
 
-.menu article ul li .item_info {
+.menu article ul li .item_info{
     display: inline-block;
     float: left;
 }
 
-.menu article ul li h3 {
+.menu article ul li h3{
     color: #545454;
     font-family: "aleo-regular", arial;
     font-size: 16px;
@@ -710,7 +561,7 @@ nav.shrink ul {
     font-weight: normal;
 }
 
-.menu article ul li .item_desc {
+.menu article ul li .item_desc{
     color: #0a0000;
     font-family: "aleo-italic", arial;
     font-size: 12px;
@@ -719,7 +570,7 @@ nav.shrink ul {
     font-weight: lighter;
 }
 
-.menu article ul li .price {
+.menu article ul li .price{
     float: right;
     color: rgb(75, 29, 29);
     font-family: "aleo-regular", arial;
@@ -731,7 +582,7 @@ nav.shrink ul {
     font-weight: normal;
 }
 
-.menu article ul li .separator {
+.menu article ul li .separator{
     width: 100%;
     height: 1px;
     background: #e3e1e1;
@@ -741,25 +592,26 @@ nav.shrink ul {
     z-index: -1;
 }
 
-.menu .load-more {
+.menu .load-more{
     display: block;
     text-align: center;
 }
 
-.menu .load-more a {
+.menu .load-more a{
     text-decoration: none;
     display: inline-block;
     color: #b7b7b7;
-    margin-top: 30px;
+    margin-top: 30px; 
     padding: 10px 15px;
     border: 1px solid #d7d5d5;
+
     color: #b7b7b7;
     font-family: "aleo-regular", arial;
     font-size: 14px;
     letter-spacing: 1px;
 }
 
-.menu .load-more a hr {
+.menu .load-more a hr{
     width: 1px;
     height: 12px;
     border: 0;
@@ -769,7 +621,7 @@ nav.shrink ul {
 }
 
 .menu .load-more a .bottom_arrow,
-.menu .load-more a .top_arrow {
+.menu .load-more a .top_arrow{
     display: inline-block;
     width: 11px;
     height: 7px;
@@ -777,10 +629,10 @@ nav.shrink ul {
     margin-bottom: 1px;
 }
 
-.menu .load-more a .bottom_arrow {
+.menu .load-more a .bottom_arrow{    
     background: url('../img/bottom_arrow.png');
 }
 
-.menu .load-more a .top_arrow {
+.menu .load-more a .top_arrow{    
     background: url('../img/top_arrow.png');
 }

@@ -8250,7 +8250,7 @@ select.bs-select-hidden,select.selectpicker {
 .top-buffer {
  margin-top:10px
 }
-#banner-image {
+#bannerr-image {
  margin:auto
 }
 #navigation {
@@ -8294,6 +8294,7 @@ body {
 }
 #menu {
  padding-left:0
+
 }
 #home-section {
  padding-right:0
@@ -8372,6 +8373,7 @@ body {
  padding:5px;
  font-weight:bold;
  text-align:center
+
 }
 #cart-top-open {
  position:fixed;
