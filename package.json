@@ -9,15 +9,15 @@
     "lite": "lite-server"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "latest",
     "ejs": "latest",
-    "express": "latest",
+    "express": "^4.16.3",
     "kill-port": "^1.1.0",
     "mongoose": "^4.13.6",
     "morgan": "latest",
     "nodemailer": "latest",
-    "nodemon": "^1.12.1",
-    "bcrypt": "latest"
+    "nodemon": "^1.12.1"
   },
   "repository": {
     "type": "git",
