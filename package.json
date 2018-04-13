@@ -1,32 +1,27 @@
 {
-  "name": "simply-siam-online-ordering-system",
-  "version": "1.0.0",
-  "description": "This is Web Application",
-  "main": "index.js",
+  "name": "shopping-cart",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "npm run lite",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lite": "lite-server"
+    "start": "node ./bin/www"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "latest",
-    "ejs": "latest",
-    "express": "^4.16.3",
-    "kill-port": "^1.1.0",
-    "mongoose": "^4.13.6",
-    "morgan": "latest",
-    "nodemailer": "latest",
-    "nodemon": "^1.12.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://iakshayy1@bitbucket.org/ShivaTeja_M/simply-siam-online-ordering-system.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/ShivaTeja_M/simply-siam-online-ordering-system#readme",
-  "devDependencies": {
-    "lite-server": "^2.3.0"
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "~1.4.3",
+    "csurf": "^1.9.0",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.1.2",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.5.0",
+    "stripe": "^5.8.0"
   }
 }
