@@ -21,23 +21,7 @@
     <meta name="google-signin-client_id" content="865619596035-c14u3e9f5o0opn9pl8ah454mu7mj3lrb.apps.googleusercontent.com">
 
     <script>
-        // function onLoad() {
-        //     gapi.load('auth2,signin2', function () {
-        //         var auth2 = gapi.auth2.init();
-        //         auth2.then(function () {
-        //             // Current values
-        //             var isSignedIn = auth2.isSignedIn.get();
-        //             var currentUser = auth2.currentUser.get();
-
-        //             if (!isSignedIn) {
-        //                 // Rendering g-signin2 button.
-        //                 gapi.signin2.render('googlesigninbutton', {
-        //                     'onsuccess': 'onSignIn'
-        //                 });
-        //             }
-        //         });
-        //     });
-        // }
+        
         function onSignIn(googleUser) {
             console.log('hello you have signed to google');
             var profile = googleUser.getBasicProfile();
@@ -52,11 +36,6 @@
             document.getElementById('Gname').style.display = "block";
             document.getElementById('Gemail').style.display = "block";
             console.log('in google sign code');
-
-            // $(".g-signin2").css("display","none");
-            // $(".data").css("display","block");
-            // $("#Gemail").css("display","block");
-            // $("#Gemail").text(profile.getEmail());
 
 
         }
@@ -117,9 +96,6 @@
 }(document, 'script', 'facebook-jssdk'));
 
 
-
-
-// _____________
 
 
 function checkLoginState() {
