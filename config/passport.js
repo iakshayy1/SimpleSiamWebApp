@@ -1,3 +1,4 @@
+// passport module is added to support login and signup functionality
 var passport = require('passport');
 var User = require('../models/user');
 var LocalStrategy = require('passport-local').Strategy;
