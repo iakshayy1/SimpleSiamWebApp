@@ -1,3 +1,4 @@
+// Model for product
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
