@@ -297,6 +297,216 @@ var products = [
         description: 'Thin rice noodle cooked in coconut milk, minced chicken, green curry paste, served with bean sprouts, green onions, Thai basil and pickled cabbage.',
         price: 8.95
     }),
+    new Product({
+        category: 'Stir-Fried Noodles',
+        title: 'N8 Thai Hot Suki',
+        description: 'Choice of meat cooked in suki sauce cooked with bean noodles, Napa Cabbage, Asian celery, carrots, onions, egg and garlic oil',
+        price: 9.95
+    }),
+    new Product({
+        category: 'Stir-Fried Noodles',
+        title: 'N9 Pretee Noodle',
+        description: 'Choice of meat stir-fried with canton noodles, Napa Cabbage, cabbage, carrots, onions, egg and green onion',
+        price: 8.95
+    }),
+    new Product({
+        category: 'Soups',
+        title: 'S1 Thai Wonton Soup',
+        description: 'Minced pork in wonton wrapper, carrots, green onion, cilantro, garlic oil, egg and white pepper',
+        price: 5.95
+    }),
+    new Product({
+        category: 'Soups',
+        title: 'S2 Pho Noodle Soup',
+        description: 'Rice noodle soup in chicken broth with choice of meat, bok choy, garlic oil, carrots, green onions, sliced onion, cilantro, ground peanuts and white pepper.',
+        price: 7.95
+    }),
+    new Product({
+        category: 'Soups',
+        title: 'S3 Xongs Pho Noodle Soup',
+        description: 'Rice noodle soup in beef broth with choice of meat, bok choy, garlic oil, carrots, green onions, sliced onion, cilantro, ground peanuts, white pepper, chilli oil and Thai basil.',
+        price: 7.95
+    }),
+    new Product({
+        category: 'Soups',
+        title: 'S4 Noodle Tom Yom',
+        description: 'Rice noodle soup or bean noodle soup cooked in choice of meat in Tom Yom paste and milk, bean sprout,  garlic oil, green onions, sliced onion, cilantro and white pepper.',
+        price: 8.95
+    }),
+    new Product({
+        category: 'Soups',
+        title: 'S5 Hot & Sour Soup(served with rice)',
+        description: 'Choice of meat cooked in Tom Yom paste and milk,  garlic oil, green onions, asian celery, sliced onion and cilantro.',
+        price: 9.95
+    }),
+    new Product({
+        category: 'Soups',
+        title: 'S6 Chicken Coconut Milk Soup(served with rice)',
+        description: 'Chicken cooked in cocnut milk, mushroom, tomato, onion, Asian celery, galangal, green onion and cilantro',
+        price: 8.95
+    }),
+    new Product({
+        category: 'Soups',
+        title: 'S7 Rice Soup',
+        description: 'Jasmine rice cooked withminced pork or chicken, egg, garlic oil, Asian celery, green onion, cilantro and white pepper.',
+        price: 5.95
+    }),
+    new Product({
+        category: 'Kids Menu',
+        title: 'K1 Corn Dog',
+        description: 'Served with french fries',
+        price: 3.95
+    }),
+    new Product({
+        category: 'Kids Menu',
+        title: 'K2 Chicken Strips',
+        description: 'Served with choice of French fries or Steamed vegetables',
+        price: 4.50
+    }),
+    new Product({
+        category: 'Kids Menu',
+        title: 'K3 Chicken Fried Rice',
+        description: '',
+        price: 5.95
+    }),
+    new Product({
+        category: 'Kids Menu',
+        title: 'K4 Soy Sauce Noodle With Chicken',
+        description: '',
+        price: 5.95
+    }),
+    new Product({
+        category: 'Sides',
+        title: 'White Rice',
+        description: '',
+        price: 1.95
+    }),
+    new Product({
+        category: 'Sides',
+        title: 'Fried Rice',
+        description: '',
+        price: 2.95
+    }),
+    new Product({
+        category: 'Sides',
+        title: 'Noodles',
+        description: '',
+        price: 2.95
+    }),
+    new Product({
+        category: 'Desserts',
+        title: 'Asian Donuts with Thai Custard',
+        description: '',
+        price: 4.95
+    }),
+    new Product({
+        category: 'Desserts',
+        title: 'Mango with Sweet Sticky Rice',
+        description: 'Fresh mango served with steamed sticky rice, sweetened with coconut syrup.',
+        price: 5.95
+    }),
+    new Product({
+        category: 'Drinks',
+        title: 'Fresh young coconut juice',
+        description: '',
+        price: 1.95
+    }),
+    new Product({
+        category: 'Drinks',
+        title: 'Thai Ice tea sweetened with cream and Boba pearl',
+        description: '',
+        price: 2.50
+    }),
+    new Product({
+        category: 'Drinks',
+        title: 'Thai Ice coffee',
+        description: '',
+        price: 2.50
+    }),
+    new Product({
+        category: 'Drinks',
+        title: 'Hot Jasmine Tea',
+        description: '',
+        price: 2.50
+    }),
+    new Product({
+        category: 'Drinks',
+        title: 'Hot Green Tea',
+        description: '',
+        price: 1.75
+    }),
+    new Product({
+        category: 'Drinks',
+        title: 'Fresh Brewed Iced Tea',
+        description: '',
+        price: 1.75
+    }),
+    new Product({
+        category: 'Drinks',
+        title: 'Hot Coffee',
+        description: '',
+        price: 1.75
+    }),
+    new Product({
+        category: 'Drinks',
+        title: 'Soda(Pepsi Products)',
+        description: 'Flavor:Strawberry, Mango, Taro, Honey Dew, Mango-Strawberry',
+        price: 3.00
+    }),
+    new Product({
+        category: 'Drinks',
+        title: 'L1 Garlic & Pepper',
+        description: '',
+        price: 6.95
+    }),
+    new Product({
+        category: 'Drinks',
+        title: 'L2 Sweet & Sour Pork, Chicken or Vegetables',
+        description: '',
+        price: 6.95
+    }),
+    new Product({
+        category: 'Drinks',
+        title: 'L3 Chicken & Cashew',
+        description: '',
+        price: 6.95
+    }),
+    new Product({
+        category: 'Lunch Specials',
+        title: 'L4 Pad Thai',
+        description: '',
+        price: 6.95
+    }),
+    new Product({
+        category: 'Lunch Specials',
+        title: 'L5 Soy Sauce Noodle',
+        description: '',
+        price: 6.95
+    }),
+    new Product({
+        category: 'Lunch Specials',
+        title: 'L6 Noodle Platter',
+        description: '',
+        price: 6.95
+    }),
+    new Product({
+        category: 'Lunch Specials',
+        title: 'L7 Paneang Curry',
+        description: '',
+        price: 6.95
+    }),
+    new Product({
+        category: 'Lunch Specials',
+        title: 'L8 Emerald Curry',
+        description: '',
+        price: 6.95
+    }),
+    new Product({
+        category: 'Lunch Specials',
+        title: 'L9 Red Curry',
+        description: '',
+        price: 6.95
+    }),
 
 
 
