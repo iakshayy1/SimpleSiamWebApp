@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
-
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -8,12 +8,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Simply Siam</a>
-            <input type="text" placeholder="Search..">
-            <a class="navbar-brand" href="/">Home</a>            
+            <a class="navbar-brand" href="/home"style="font-size: 25px !important;">Simply Siam</a>
+            <a class="navbar-brand" href="/home">Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="navbar-brand" href="/menu">Menu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="navbar-brand" href="/index">OrderOnline &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+            <a class="navbar-brand" href="/about">Contact</a>
+
         </div>
         
 
+        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -23,13 +27,14 @@
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> User Management <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> Checkout <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         {{# if login }}
-                            <li><a href="/user/profile">User Account</a></li>
+                            <li><a href="/user/profile">Profile</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="/user/logout">Logout</a></li>
                         {{ else }}
+                            <li><a href="/index">Guest Checkout</a></li>
                             <li><a href="/user/signup">Sign up</a></li>
                             <li><a href="/user/signin">Sign in</a></li>
                         {{/if}}
