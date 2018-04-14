@@ -6,17 +6,14 @@ This README would normally document whatever steps are necessary to get your app
 
 * An online food ordering system for Simply Siam Restaurant.
 * This application uses nodejs for implementing server and expressjs for routing
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* open the git bash terminal from the seed folder of the Simply Siam - Online Ordering System
+* enter node product-seeder.js to insert the menu products into database for futher retrieval
+* then, open the git bash terminal from the Simply Siam - Online Ordering System
+* enter npm install to get dependencies install
+* enter npm start to run the application at http://localhost:3000/home.
 
 ### Contribution guidelines ###
 
