@@ -188,6 +188,49 @@ router.post('/guest-checkout', function(req, res, next) {
             res.redirect('/index');
         });
     });
+
+
+// *********************************** sending order email ********************************8888
+
+
+
+// var MongoClient = require('mongodb').MongoClient;
+// var ObjectId = require('mongodb').ObjectID;
+// var url = "mongodb://localhost:27017/OnlineOrder";
+
+// var data;
+
+// var findorder = function (db, callback) {
+//     var cursor = db.collection('OnlineOrder').findOne( {$query:{}, $orderby:{$natural:-1}} )
+
+//     cursor.each(function (err, doc) {
+
+//         if (doc != null) {
+//             console.dir(doc);
+
+//         } else {
+//             callback();
+//         }
+//     });
+// };
+
+// MongoClient.connect(url, function (err, db) {
+
+//     findRestaurants(db, function () {
+//         db.close();
+//     });
+// });
+
+
+
+
+
+
+
+
+
+
+
 });
 
 // ****************** contact page email code *********************

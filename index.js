@@ -194,7 +194,7 @@ res.render('contact',{
 
 // ***************** contact page email ends *******************
 
-// ***************** order addess emalil code ******************
+// ***************** order address emalil code ******************
 
 app.post('/orderAddressPage', function(req,res){
 console.log('i am fetching data from order email');
