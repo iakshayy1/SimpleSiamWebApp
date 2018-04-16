@@ -184,8 +184,11 @@ router.post('/guest-checkout', function(req, res, next) {
         });
         order.save(function(err, result) {
             req.flash('success', 'Ordered Successfully!');
+            console.log("hekko" + result);
             req.session.cart = null;
+            console.log("hekko" + result);
             res.redirect('/index');
+            console.log("hekko" + result);
         });
     });
 });
