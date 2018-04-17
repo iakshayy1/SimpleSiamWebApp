@@ -1,4 +1,146 @@
 <div class="row">
+
+{{!-- ************************* fb and google login scripts  ****************************** --}}
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="865619596035-c14u3e9f5o0opn9pl8ah454mu7mj3lrb.apps.googleusercontent.com">
+
+    <script>
+        
+        function onSignIn(googleUser) {
+            console.log('hello you have signed to google');
+            var profile = googleUser.getBasicProfile();
+            // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Full Name: ' + profile);
+            // console.log('Name: ' + profile.getName());
+            // console.log('Image URL: ' + profile.getImageUrl());
+            // console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+            document.getElementById('Gname').innerHTML = 'Hey' + googleUser.getBasicProfile().getName();
+            document.getElementById('Gemail').innerHTML = googleUser.getBasicProfile().getEmail();
+            document.getElementById('Gname').style.display = "block";
+            document.getElementById('Gemail').style.display = "block";
+            console.log('in google sign code');
+
+
+        }
+    </script>
+
+    <script>
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+            });
+        }
+    </script>
+
+
+
+
+    <!-- *******************facebook login code********************* -->
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '409127379511434',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+      
+    // FB.AppEvents.logPageView(); // this is not required   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+    <!-- *********************************************************** -->
+
+    <!--  fb button code-->
+
+    <!--  fb button code-->
+
+<div id="fb-root"></div>
+
+<script>
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=409127379511434&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
+
+
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+
+function statusChangeCallback(response){
+
+  FB.api('/me?fields=first_name,last_name,email,gender,age_range,picture.width(150).height(150)', 
+    function(response) {
+      // console.log('Successful login for: ' + response.name);
+      document.getElementById('name').innerHTML = response.first_name +' '+ response.last_name;
+      document.getElementById('email').innerHTML = response.email ;
+      document.getElementById('gender').innerHTML = response.gender ;
+      document.getElementById('age').innerHTML = (response.age_range.min) + "-" + (response.age_range.min + 1) + " years old";
+      document.getElementById('picture').innerHTML = "<img src='" + response.picture.data.url + "'>"
+      document.getElementById('birthday').innerHTML = response.birthday;
+
+         document.getElementById('loginBtn').style.display= "block" ;
+         document.getElementById('name').style.display= "block" ;
+         document.getElementById('email').style.display= "block" ;
+         document.getElementById('gender').style.display= "block" ;
+         document.getElementById('age').style.display= "block" ;
+         document.getElementById('picture').style.display= "block" ;
+         document.getElementById('birthday').style.display= "block" ;
+
+         document.getElementById('logoutBtn').style.display= "block" ;
+
+    });
+}
+// _____________
+
+function logout(response)
+{
+
+  FB.logout(function(response) {
+   // Person is now logged out
+
+      document.getElementById('loginBtn').style.display= "block" ;
+document.getElementById('name').style.display= "none" ;
+document.getElementById('email').style.display= "none" ;
+
+  document.getElementById('gender').style.display= "none"  ;
+         document.getElementById('age').style.display= "none"  ;
+         document.getElementById('picture').style.display= "none"  ;
+         document.getElementById('birthday').style.display= "none"  ;
+      document.getElementById('logoutBtn').style.display= "none" ;
+});
+}  
+</script>
+
+
+{{!-- ************************************************************************************* --}}
+
+
+
+
+
     <div class="col-md-4 col-md-offset-4">
         <h1>Sign In</h1>
         {{#if hasErrors}}
@@ -21,5 +163,58 @@
             <button type="submit" class="btn btn-primary">Sign In</button>
         </form>
         <p>Don't have an account? <a href="/user/signup">Sign up instead!</a></p>
+
+
+{{!-- ***************************************fb and google login buttons ******************************* --}}
+
+<br>
+                            <br>
+                            <!-- Login with google -->
+                            <!-- <div class="g-signin2" id="googlesigninbutton" data-onsuccess="onSignIn"></div> -->
+                            <div class="g-signin2" data-onclick="onSignIn"></div>
+                            <!-- <div id="Gname">..</div>
+                            <div id="Gemail">..</div> -->
+                            <br>
+                            <a href="#" onclick="signOut();">Sign out</a>
+                            <button id="signOutBtn" onclick="signOut()" style="display:none;" > Signout</button>
+
+
+<br> <br>
+
+
+
+<!-- login with fb -->
+<!-- <div id="loginBtn " class="col-sm-12 controls fb-button " >
+<fb:login-button 
+  scope="public_profile,email "
+  onlogin="checkLoginState(); ">
+</fb:login-button>
+<div id="name "> </div>
+<div id="email ">   </div>
+<div id="gender ">   </div>
+<br>
+ <button type="button "id="logoutBtn " onclick="logout() " style="display:none ;" class="btn fb-button " > Logout</button>
+ <button id="logoutBtn " onclick="logout() " style="display:none ;">Logout</button>
+ </div> -->
+<div id="loginBtn">
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+<!-- <div id="data"></div> -->
+<div id="name"> </div>
+<div id="email">   </div>
+<div  id="gender"></div>
+<div id="age"></div>
+<div id="picture"></div>
+<div id="birthday"></div>
+<br>
+<!-- <div id="logoutBtn" onclick="logout()" style="display:none;"> Logout</div>
+<br> -->
+<button type="button" id="logoutBtn" onclick="logout() " style="display:none ;" class="btn fb-button " > Logout</button>
+
+
+
+{{!-- *************************************************************************************************** --}}
     </div>
 </div>
