@@ -1,77 +1,49 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-<!-- <center> <b><%= message %></b></center> -->
-<form action="/sendemail" method="post">
 <center>{{message}}</center>
-    <div class="container">
-      <!-- Example row of columns -->
-     <div class="row">
-         
-          <div class="form-group">
-  <label for="example-text-input" class="col-md-12 control-label">First Name</label>
-  <div class="col-md-6 inputGroupContainer">
-       <div class = "input-group">
-           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-    <input class="form-control" type="text" name="firstname" placeholder="First name" id="example-text-input">
-  </div>
-</div>
-</div>
-<div class="form-group">
-  <label for="example-search-input" class="col-md-12 control-label">Last Name</label>
-  <div class="col-md-6 inputGroupContainer">
-       <div class = "input-group">
-           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-    <input class="form-control" type="search" name="lastname" placeholder="Last name" id="example-search-input">
-  </div>
-</div>
-</div>
-<div class="form-group">
-  <label class="col-md-12 control-label">Email</label>
-  <div class="col-md-6 inputGroupContainer">
-      <div class = "input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-    <input class="form-control" type="email" name="email" placeholder="mail@example.com" id="example-email-input">
-  </div>
-</div>
-</div>
-<div class="form-group">
-  <label class="col-md-12 control-label">Number</label>
-  <div class="col-md-6 inputGroupContainer">
-      <div class ="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-    <input class="form-control" type="number" name="number" placeholder="660xxxxxx" id="example-number-input">
-    
-  </div>
-</div>
-</div>
-<div class="form-group">
-  <label class="col-md-12 control-label">Message</label>
-    <div class="col-md-6 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-        	<textarea class="form-control" name="message" placeholder="type message here....."></textarea>
-  </div>
-  </div>
-</div>
-<div class="form-group">
-    <label class="col-md-12 control-label">&nbsp;</label>
-      <div class="offset-sm-2 col-sm-10"><center>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </div>
- </div>
-
- 
-
-      </form>
-      
-
-      <!-- end of form -->
-
-    </div>  
-    </div> <!-- /container --> 
-    </div> 
+<section id="contact">
+  <div class="container">
+    <div class="well well-sm">
+      <h3><strong>Contact Us</strong></h3>
     </div>
+	
+	<div class="row">
+	  <div class="col-md-7">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.726527458893!2d-94.8752258852796!3d40.34841217937309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87eac572aa0837df%3A0x9b4fa047cf9a658d!2sSimply+Siam+Thai+Restaurant!5e0!3m2!1sen!2sus!4v1508287290980" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+
+      <div class="col-md-5">
+          <h4><strong>Contact Us</strong></h4>
+        <form action="/sendemail" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" name="firstname" placeholder="first name" required="true">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="lastname" placeholder="last name">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email"  placeholder="E-mail">
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" name="number"  placeholder="Phone">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="3" placeholder="Message"></textarea>
+          </div>
+          <button class="btn btn-default" type="submit" name="button">
+              <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
     
     <footer id = icons>
+      <br>
+      
       <div class ="container">
   <div class="col-md-6">
     <p>Contact Us @(660)582-2077</p>
@@ -83,10 +55,7 @@
      </div>
      </div>
      </div> 
-     <div class="right" align="center">
-       &nbsp;&nbsp;&nbsp;&nbsp;
-<iframe class="right" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.726527458893!2d-94.8752258852796!3d40.34841217937309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87eac572aa0837df%3A0x9b4fa047cf9a658d!2sSimply+Siam+Thai+Restaurant!5e0!3m2!1sen!2sus!4v1508287290980" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
+     
       
 </footer>
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

@@ -193,36 +193,36 @@ router.post('/guest-checkout', function(req, res, next) {
     });
 
 
-// *********************************** sending order email ********************************8888
+    // *********************************** sending order email ********************************8888
 
 
 
-// var MongoClient = require('mongodb').MongoClient;
-// var ObjectId = require('mongodb').ObjectID;
-// var url = "mongodb://localhost:27017/OnlineOrder";
+    // var MongoClient = require('mongodb').MongoClient;
+    // var ObjectId = require('mongodb').ObjectID;
+    // var url = "mongodb://localhost:27017/OnlineOrder";
 
-// var data;
+    // var data;
 
-// var findorder = function (db, callback) {
-//     var cursor = db.collection('OnlineOrder').findOne( {$query:{}, $orderby:{$natural:-1}} )
+    // var findorder = function (db, callback) {
+    //     var cursor = db.collection('OnlineOrder').findOne( {$query:{}, $orderby:{$natural:-1}} )
 
-//     cursor.each(function (err, doc) {
+    //     cursor.each(function (err, doc) {
 
-//         if (doc != null) {
-//             console.dir(doc);
+    //         if (doc != null) {
+    //             console.dir(doc);
 
-//         } else {
-//             callback();
-//         }
-//     });
-// };
+    //         } else {
+    //             callback();
+    //         }
+    //     });
+    // };
 
-// MongoClient.connect(url, function (err, db) {
+    // MongoClient.connect(url, function (err, db) {
 
-//     findRestaurants(db, function () {
-//         db.close();
-//     });
-// });
+    //     findRestaurants(db, function () {
+    //         db.close();
+    //     });
+    // });
 
 
 
@@ -247,6 +247,7 @@ router.post('/sendemail', function(req, res) {
     var message = req.body.message;
 
     console.log('firstname is ', firstname);
+    console.log('lastname is ', lastname);
     console.log('message is', message);
 
 

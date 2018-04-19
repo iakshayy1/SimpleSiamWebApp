@@ -1,120 +1,108 @@
 <style>
-  .parallax1 {
-    /* The image used */
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+    background: url('bck.jpg');
+}
+
+.pimg1,
+.pimg2,
+.pimg3,
+.pimg4 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pimg1 {
     background-image: url("https://bloximages.chicago2.vip.townnews.com/maryvilledailyforum.com/content/tncms/assets/v3/editorial/d/e8/de855fd2-d192-11e5-9e2e-f705bbee4583/56bde96bd477e.image.jpg?resize=1200%2C900");
-
-    /* Set a specific height */
-    height: 500px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height: 400%;
 }
-.parallax2 {
-    /* The image used */
-     background-image: url("map.png");
-    background-image: url("https://images.pexels.com/photos/5876/food-salad-healthy-vegetables.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
 
-
-
-    /* Set a specific height */
-    height: 500px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.pimg2 {
+    background-image: url("https://bloximages.chicago2.vip.townnews.com/maryvilledailyforum.com/content/tncms/assets/v3/editorial/d/e8/de855fd2-d192-11e5-9e2e-f705bbee4583/56bde96bd477e.image.jpg?resize=1200%2C900");
+    min-height: 400px;
 }
-.parallax3 {
-    /* The image used */
+
+.pimg3 {
     background-image: url("https://images.pexels.com/photos/175753/pexels-photo-175753.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
-
-    /* Set a specific height */
-    height: 500px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
+    min-height: 400px;
+}
+.pimg4 {
+    background-image: url("http://4.bp.blogspot.com/-tIYEinS9AhU/VrD9hp0b2eI/AAAAAAAAEp4/Z0xfQjRgWa8/s1600/DSC_5797.jpg");
+    min-height: 400px;
 }
 
-
-.arrow_box {
-  position: relative;
-  background: #88b7d5;
-  border: 4px solid #c2e1f5;
-}
-.arrow_box:after, .arrow_box:before {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.arrow_box:after {
-  border-color: rgba(136, 183, 213, 0);
-  border-top-color: #88b7d5;
-  border-width: 30px;
-  margin-left: -30px;
-}
-.arrow_box:before {
-  border-color: rgba(194, 225, 245, 0);
-  border-top-color: #c2e1f5;
-  border-width: 36px;
-  margin-left: -36px;
-}
-
-.navigator
-{
-    position: fixed;
-    z-index: 999;
-    top: 50%;
-    right: 48px;
-
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-
-    opacity: 0;
-}
-
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
+.section {
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+    padding: 30px 40px;
+    font-family: "Lato", sans-serif;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
 }
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.ptext .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.ptext .border.trans {
+    background-color: transparent;
+}
+
+@media(max-width:568px) {
+    .pimg1,
+    .pimg2,
+    .pimg3,
+    .pimg4 {
+        background-attachment: scroll;
+    }
+}
+
+
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+
 
 /* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-}
+
+
 #footer {
    background-color: #000000;
     
@@ -235,46 +223,70 @@ document.getElementById('email').style.display= "none" ;
 
 
 <!-- fb button code ends  -->
+<body>
+    {{!-- <div class="pimg1">
+        <div class="ptext">
+               <span class="border">
+                    Simply Siam Thai Restaurant      
+             </span>
+             
+        </div>
+    </div>
 
-<div class="navigator" style="opacity: 1.25; transform: matrix(1, 0, 0, 1, 0, 0);"> </div>
+    <section class="section section-light">
+        <p>
+            Welcome to Simply Siam, a Thai restaurant located in the heart of Maryville, MO. We serve authentic Thai food in a soothing, family-friendly environment at prices that can't be beat. If you've never experienced Thai food, imagine that other Asian cuisine
+            you know and love, but with pizzazz. Fresher, bolder and, if you'd like, with a nice spicy kick (optional, of course).
+        </p>
+    </section> --}}
 
+    <div class="pimg2">
+        <div class="ptext">
+            <span class="border">
+                    SIMPLY SIAM THAI FOOd
 
-<div class="container">
-  
+      </span>
+        </div>
+    </div>
 
+    <section class="section section-light">
+        <p>
+          Welcome to Simply Siam, a Thai restaurant located in the heart of Maryville, MO. We serve authentic Thai food in a soothing, family-friendly environment at prices that can't be beat. If you've never experienced Thai food, imagine that other Asian cuisine
+            you know and love, but with pizzazz. Fresher, bolder and, if you'd like, with a nice spicy kick.
+            
+        </p>
+    </section>
 
+    <div class="pimg3">
+        <div class="ptext">
+            <span class="border trans">
+                   TASTEFUL RECIPES
+      </span>
+        </div>
+    </div>
 
-<div class="parallax1" ></div>
-<div class="arrow_box"> </div>
+    <section class="section section-dark">
 
-<div style="height:200px;background-color:white;font-size:22px;font-family:family-name|generic-family|initial|inherit;">
-<h2 Style=" font-family:cursive">
-  About Us
-</h2>
-Welcome to Simply Siam, a Thai restaurant located in the heart of Maryville, MO. We serve authentic Thai food in a soothing, family-friendly environment at prices that can't be beat. If you've never experienced Thai food, imagine that other Asian cuisine you know and love, but with pizzazz. Fresher, bolder and, if you'd like, with a nice spicy kick (optional, of course).
-</div>
-<div class="parallax2"></div>
-<div class="arrow_box"> </div>
-<div style="height:180px;background-color:white;font-size:22px;font-family:family-name|generic-family|initial|inherit;">
+        <p>
+            Thailand (formerly Siam) is an exotic kingdom in the heart of Southeast Asia. Known for its rich history, vibrant culture, and delicious cuisine, Thailand blends modern living into thousands of years of tradition, creating a truly unique identity.
 
-<h2 Style=" font-family:cursive">
-  Thailand
-</h2>
+        </p>
+    </section>
+    <div class="pimg4">
+        <div class="ptext">
+            <span class="border trans">
+                  Simply Exotic. Simply Delicious. Simply Siam.
+      </span>
+        </div>
+    </div>
+    <section class="section section-light">
 
-Thailand (formerly Siam) is an exotic kingdom in the heart of Southeast Asia. Known for its rich history, vibrant culture, and delicious cuisine, Thailand blends modern living into thousands of years of tradition, creating a truly unique identity.
-</div>
-<div class="parallax3"></div>
-<div class="arrow_box"> </div>
-<div style="height:150px;background-color:white;font-size:22px;font-family:family-name|generic-family|initial|inherit;">
-<h2 Style=" font-family:cursive">
-  
-Simply Exotic. Simply Delicious. Simply Siam.
+        <p>
+            Come on in and give us a try, or call 660-582-2077 and we'll deliver anywhere in town, including the Northwest campus.
 
-</h2>
-Come on in and give us a try, or call 660-582-2077 and we'll deliver anywhere in town, including the Northwest campus.
-</div>
-
-</div>
+        </p>
+    </section>
+    
 
 </body>
 <div>
