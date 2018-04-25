@@ -9,11 +9,14 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
-* open the git bash terminal from the seed folder of the Simply Siam - Online Ordering System
-* enter node product-seeder.js to insert the menu products into database for futher retrieval
-* then, open the git bash terminal from the Simply Siam - Online Ordering System
-* enter npm install to get dependencies install
-* enter npm start to run the application at http://localhost:3000/home.
+* Open the git bash terminal from the seed folder of the Simply Siam - Online Ordering System
+* Enter node product-seeder.js to insert the menu products into database for futher retrieval
+* Then, open the git bash terminal from the Simply Siam - Online Ordering System
+* Enter npm install to get dependencies install
+* Enter npm start to run the application at http://localhost:3000/home.
+* If in case an error like  "Cannot find module 'debug'/Cannot find module 'bcrypt'" occurs. 
+* In git bash, enter "npm install --save debug" and "npm install --save debug" respectively and press enter
+* Then, enter npm start to run the application at http://localhost:3000/home.
 
 ### Contribution guidelines ###
 
