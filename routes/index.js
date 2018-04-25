@@ -150,7 +150,7 @@ router.post('/checkout', isLoggedIn, function(req, res, next) {
         order.save(function(err, result) {
             req.flash('success', 'Ordered Successfully!');
             req.session.cart = null;
-            res.redirect('/');
+            res.redirect('/index');
         });
     });
 });
