@@ -1,304 +1,92 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Simply Siam</title>
 
-body,
-html {
-    height: 100%;
-    margin: 0;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.8em;
-    color: #666;
-    background: url('bck.jpg');
-}
-
-.pimg1,
-.pimg2,
-.pimg3,
-.pimg4 {
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.pimg1 {
-    background-image: url("https://bloximages.chicago2.vip.townnews.com/maryvilledailyforum.com/content/tncms/assets/v3/editorial/d/e8/de855fd2-d192-11e5-9e2e-f705bbee4583/56bde96bd477e.image.jpg?resize=1200%2C900");
-    min-height: 400%;
-}
-
-.pimg2 {
-    background-image: url("https://bloximages.chicago2.vip.townnews.com/maryvilledailyforum.com/content/tncms/assets/v3/editorial/d/e8/de855fd2-d192-11e5-9e2e-f705bbee4583/56bde96bd477e.image.jpg?resize=1200%2C900");
-    min-height: 400px;
-}
-
-.pimg3 {
-    background-image: url("https://images.pexels.com/photos/175753/pexels-photo-175753.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
-    min-height: 400px;
-}
-.pimg4 {
-    background-image: url("http://4.bp.blogspot.com/-tIYEinS9AhU/VrD9hp0b2eI/AAAAAAAAEp4/Z0xfQjRgWa8/s1600/DSC_5797.jpg");
-    min-height: 400px;
-}
-
-.section {
-    text-align: center;
-    padding: 30px 40px;
-    font-family: "Lato", sans-serif;
-}
-
-.section-light {
-    background-color: #f4f4f4;
-    color: #666;
-}
-
-.section-dark {
-    background-color: #282e34;
-    color: #ddd;
-}
-
-.ptext {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    color: #000;
-    font-size: 27px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.ptext .border {
-    background-color: #111;
-    color: #fff;
-    padding: 20px;
-}
-
-.ptext .border.trans {
-    background-color: transparent;
-}
-
-@media(max-width:568px) {
-    .pimg1,
-    .pimg2,
-    .pimg3,
-    .pimg4 {
-        background-attachment: scroll;
-    }
-}
-
-
-
-.section-light {
-    background-color: #f4f4f4;
-    color: #666;
-}
-
-
-
-/* Add a color to the active/current link */
-
-#footer {
-   background-color: #000000d7;
-    
-
-     float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 10px 12px;
-    text-decoration: none;
-    font-size: 17px;
-      position: absolute;
-    right: 0px;
-
-}
-
-
-
-  </style>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-<!-- *******************facebook login code********************* -->
 
 
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '409127379511434',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-      
-    // FB.AppEvents.logPageView(); // this is not required   
-      
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<!-- *********************************************************** -->
-
-<!--  fb button code-->
-
-<div id="fb-root"></div>
-
-<script>
-
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=409127379511434&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
-
-
-
-// _____________
-
-
-function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-}
-
-function statusChangeCallback(response){
-
-  FB.api('/me?fields=first_name,last_name,email,gender,age_range,picture.width(150).height(150)', 
-    function(response) {
-      // console.log('Successful login for: ' + response.name);
-      document.getElementById('name').innerHTML = response.first_name +' '+ response.last_name;
-      document.getElementById('email').innerHTML = response.email ;
-      document.getElementById('gender').innerHTML = response.gender ;
-      document.getElementById('age').innerHTML = (response.age_range.min) + "-" + (response.age_range.min + 1) + " years old";
-      document.getElementById('picture').innerHTML = "<img src='" + response.picture.data.url + "'>"
-      document.getElementById('birthday').innerHTML = response.birthday;
-
-         document.getElementById('loginBtn').style.display= "block" ;
-         document.getElementById('name').style.display= "block" ;
-         document.getElementById('email').style.display= "block" ;
-         document.getElementById('gender').style.display= "block" ;
-         document.getElementById('age').style.display= "block" ;
-         document.getElementById('picture').style.display= "block" ;
-         document.getElementById('birthday').style.display= "block" ;
-
-         document.getElementById('logoutBtn').style.display= "block" ;
-
-    });
-}
-// _____________
-
-function logout(response)
-{
-
-  FB.logout(function(response) {
-   // Person is now logged out
-
-      document.getElementById('loginBtn').style.display= "block" ;
-document.getElementById('name').style.display= "none" ;
-document.getElementById('email').style.display= "none" ;
-
-  document.getElementById('gender').style.display= "none"  ;
-         document.getElementById('age').style.display= "none"  ;
-         document.getElementById('picture').style.display= "none"  ;
-         document.getElementById('birthday').style.display= "none"  ;
-      document.getElementById('logoutBtn').style.display= "none" ;
-});
-}  
-</script>
-
-
-
-
-<!-- fb button code ends  -->
-<body>
-    {{!-- <div class="pimg1">
-        <div class="ptext">
-               <span class="border">
-                    Simply Siam Thai Restaurant      
-             </span>
-             
-        </div>
-    </div>
-
-    <section class="section section-light">
-        <p>
-            Welcome to Simply Siam, a Thai restaurant located in the heart of Maryville, MO. We serve authentic Thai food in a soothing, family-friendly environment at prices that can't be beat. If you've never experienced Thai food, imagine that other Asian cuisine
-            you know and love, but with pizzazz. Fresher, bolder and, if you'd like, with a nice spicy kick (optional, of course).
-        </p>
-    </section> --}}
-
-    <div class="pimg2">
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2"> <div class="pimg2">
         <div class="ptext">
             <span class="border">
-                    SIMPLY SIAM THAI FOOd
+                    SIMPLY SIAM THAI FOOD
 
       </span>
         </div>
-    </div>
+    </div></h1>
+        
+       
+        <br><br>
 
-    <section class="section section-light">
-        <p>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/simply.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+  <p>
           Welcome to Simply Siam, a Thai restaurant located in the heart of Maryville, MO. We serve authentic Thai food in a soothing, family-friendly environment at prices that can't be beat. If you've never experienced Thai food, imagine that other Asian cuisine
             you know and love, but with pizzazz. Fresher, bolder and, if you'd like, with a nice spicy kick.
             
         </p>
-    </section>
+      
 
-    <div class="pimg3">
-        <div class="ptext">
-            <span class="border trans">
-                   TASTEFUL RECIPES
-      </span>
-        </div>
     </div>
+  </div>
 
-    <section class="section section-dark">
 
-        <p>
-            Thailand (formerly Siam) is an exotic kingdom in the heart of Southeast Asia. Known for its rich history, vibrant culture, and delicious cuisine, Thailand blends modern living into thousands of years of tradition, creating a truly unique identity.
-
-        </p>
-    </section>
-    <div class="pimg4">
-        <div class="ptext">
-            <span class="border trans">
-                  Simply Exotic. Simply Delicious. Simply Siam.
-      </span>
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Simply Exotic. Simply Delicious. Simply Siam.</h5>
         </div>
+      </div>
     </div>
-    <section class="section section-light">
+    <div class="parallax"><img src="images/bck.jpg" alt="Unsplashed background img 2"></div>
+  </div>
 
-        <p>
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p>
             Come on in and give us a try, or call 660-582-2077 and we'll deliver anywhere in town, including the Northwest campus.
 
         </p>
-    </section>
-    
+        </div>
+      </div>
 
-</body>
-<div>
-<footer id="footer" class="col-xs-12">
-          <hr />
-          <div id="footer-copyright">&copy; 2018 <a href= target="_blank">Simplysiam.com</a> All rights reserved.</div> <div id="footer-links"><a href="https://Simplysiam/privacy-policy.html" target="_blank">Privacy Policy</a> &#124; <a href="https://Simplysiam.com/customer-faq" target="_blank">FAQ</a></div>
-        
-
-<!--  testing -->
-
-<!-- <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
+    </div>
+  </div>
 
 
+  <footer class="page-footer teal">
+    <hr />
+          <center><div id="footer-copyright">&copy; 2018 <a href= target="_blank">Simplysiam.com</a> All rights reserved.</div> <div id="footer-links"></div></center>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/javascripts/materialize.js"></script>
+  <script src="/javascripts/init.js"></script>
+
+  </body>
+</html>

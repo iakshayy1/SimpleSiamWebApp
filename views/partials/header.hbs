@@ -1,4 +1,42 @@
-<nav class="navbar navbar-default">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/home" class="brand-logo">Simply Siam</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/index">OnlineOrder</a></li>
+        <li><a href="/about">Contact</a></li>
+        <li>
+                    <a href="/shopping-cart/">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart
+                        <span class="mui-badge">({{session.cart.totalQty}})</span>
+                    </a>
+                </li>
+                 <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> Checkout <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        {{# if login }}
+                            <li><a href="/user/profile">Profile</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/user/logout">Logout</a></li>
+                        {{ else }}
+                            <li><a href="/index">Guest Checkout</a></li>
+                            <li><a href="/user/signup">Sign up</a></li>
+                            <li><a href="/user/signin">Sign in</a></li>
+                        {{/if}}
+
+                    </ul>
+                </li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+{{!-- <nav class="navbar navbar-expand-lg  navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -44,4 +82,4 @@
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-</nav>
+</nav> --}}

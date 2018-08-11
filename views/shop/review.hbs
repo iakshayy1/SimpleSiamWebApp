@@ -1,11 +1,11 @@
-<center><h1>Review Order</h1></center>
+<center><h3>Review Order</h3></center>
 {{# if products }}
     <div class="row">
         <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
             <ul class="list-group">
                 {{# each products }}
                     <li class="list-group-item">
-                        <span class="badge">{{ this.qty }}</span>
+                        <span>{{ this.qty }}</span>&nbsp;&nbsp;
                         <strong>{{ this.item.title }}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <strong >${{ this.price }}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   
@@ -32,8 +32,8 @@
     <hr>
     <div class="row">
         <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-            <a href="/checkout" type="button" class="btn btn-success">user continue</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/guest-checkout" type="button" class="btn btn-info">guest continue</a>
+            <a href="/checkout" type="button" class="btn btn-success">continue as user</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/guest-checkout" type="button" class="btn btn-info">continue as guest</a>
         </div>
     </div>
     

@@ -135,14 +135,14 @@ document.getElementById('email').style.display= "none" ;
 </script>
 
 
-{{!-- ************************************************************************************* --}}
+
 
 
 
 
 
     <div class="col-md-4 col-md-offset-4">
-        <h1>Sign In</h1>
+        <h3>Sign In</h3>
         {{#if hasErrors}}
             <div class="alert alert-danger">
                 {{# each messages }}
@@ -167,19 +167,6 @@ document.getElementById('email').style.display= "none" ;
 
 {{!-- ***************************************fb and google login buttons ******************************* --}}
 
-<br>
-                            <br>
-                            <!-- Login with google -->
-                            <!-- <div class="g-signin2" id="googlesigninbutton" data-onsuccess="onSignIn"></div> -->
-                            <div class="g-signin2" data-onclick="onSignIn"></div>
-                            <!-- <div id="Gname">..</div>
-                            <div id="Gemail">..</div> -->
-                            <br>
-                            <a href="#" onclick="signOut();">Sign out</a>
-                            <button id="signOutBtn" onclick="signOut()" style="display:none;" > Signout</button>
-
-
-<br> <br>
 
 
 
@@ -196,7 +183,7 @@ document.getElementById('email').style.display= "none" ;
  <button type="button "id="logoutBtn " onclick="logout() " style="display:none ;" class="btn fb-button " > Logout</button>
  <button id="logoutBtn " onclick="logout() " style="display:none ;">Logout</button>
  </div> -->
-<div id="loginBtn">
+{{!-- <div id="loginBtn">
 <fb:login-button 
   scope="public_profile,email"
   onlogin="checkLoginState();">
@@ -216,5 +203,5 @@ document.getElementById('email').style.display= "none" ;
 
 
 {{!-- *************************************************************************************************** --}}
-    </div>
+    </div> --}}
 </div>
